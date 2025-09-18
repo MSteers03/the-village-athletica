@@ -30,9 +30,6 @@ jobs:
     - name: Generate application key
       run: php artisan key:generate
 
-    - name: Cache the application key
-      run: echo "APP_KEY=$(php artisan key:show --show-value)" >> $GITHUB_ENV
-
     - name: Install NPM dependencies
       run: npm install
 
@@ -50,7 +47,9 @@ jobs:
     - name: Execute tests
       env:
         APP_ENV: testing
-        APP_KEY: ${{ env.APP_KEY }}
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-      run: php artisan test
+      run: |
+        # Read the APP_KEY from the .env file and export it
+        export APP_KEY=$(grep -E "^APP_KEY=" .env | cut -d '=' -f2-)
+        php artisan test
