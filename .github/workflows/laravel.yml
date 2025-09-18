@@ -25,10 +25,13 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-interaction
 
     - name: Create environment file
-      run: |
-        cp .env.example .env
-        # Generate a secure app key
-        php artisan key:generate
+      run: cp .env.example .env
+
+    - name: Generate application key
+      run: php artisan key:generate
+
+    - name: Cache the application key
+      run: echo "APP_KEY=$(php artisan key:show --show-value)" >> $GITHUB_ENV
 
     - name: Install NPM dependencies
       run: npm install
@@ -47,7 +50,7 @@ jobs:
     - name: Execute tests
       env:
         APP_ENV: testing
+        APP_KEY: ${{ env.APP_KEY }}
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
-        APP_KEY: ${{ secrets.APP_KEY }}
       run: php artisan test
