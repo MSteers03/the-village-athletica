@@ -17,18 +17,18 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.3'  # Updated to a more recent PHP version
+        php-version: '8.3'
         extensions: mbstring, xml, ctype, curl, dom, fileinfo, json, openssl, pdo, tokenizer
         coverage: none
 
     - name: Install Composer dependencies
       run: composer install --prefer-dist --no-progress --no-interaction
 
-    - name: Copy .env
-      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
-
-    - name: Generate application key
-      run: php artisan key:generate
+    - name: Create environment file
+      run: |
+        cp .env.example .env
+        # Generate a secure app key
+        php artisan key:generate
 
     - name: Install NPM dependencies
       run: npm install
@@ -37,7 +37,7 @@ jobs:
       run: npm run build
 
     - name: Set up permissions
-      run: chmod -R 777 storage bootstrap/cache
+      run: chmod -R 775 storage bootstrap/cache
 
     - name: Create SQLite database
       run: |
@@ -46,6 +46,8 @@ jobs:
 
     - name: Execute tests
       env:
+        APP_ENV: testing
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
+        APP_KEY: ${{ secrets.APP_KEY }}
       run: php artisan test
