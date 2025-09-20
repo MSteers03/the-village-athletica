@@ -1,5 +1,3 @@
-import { SpeedInsights } from "@vercel/speed-insights/next"
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,5 +59,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
             </div>
         </div>
     </footer>
+    <script type="module">
+        import { SpeedInsights } from "@vercel/speed-insights/next"
+    </script>
 </body>
 </html>
