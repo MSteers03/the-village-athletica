@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="text-center mb-12">
-    <h1 class="text-4xl font-bold text-blue-800 mb-4">Join the Village</h1>
+    <h1 class="text-4xl font-bold text-village-brown mb-4">Join the Village</h1>
     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the plan that works best for your fitness journey. All plans include access to our premium equipment and basic amenities.</p>
 </div>
 

@@ -8,9 +8,9 @@
     <!-- Add any additional CSS or fonts here -->
     @vite('resources/css/app.css')
 </head>
-<body class="font-sans bg-[var(--village-grey)]">
+<body class="font-sans bg-village-grey">
     <!-- Header -->
-    <header class="bg-white text-[var(--village-brown)] shadow-md">
+    <header class="bg-white text-village-brown shadow-md">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold">The Village Athletica</div>
             <nav>
@@ -30,7 +30,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-[var(--village-brown)] text-white py-8 mt-12">
+    <footer class="bg-village-brown text-white py-8 mt-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
