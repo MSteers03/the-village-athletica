@@ -9,7 +9,8 @@ export default defineConfig({
       refresh: true,
     }),
   ],
-  server: {
-    https: true, // makes vite serve with https in dev
-  }
+  build: {
+    outDir: 'public/build', // default, but make sure it's here
+  },
+  base: '/', // ensures relative paths instead of absolute http://
 });
