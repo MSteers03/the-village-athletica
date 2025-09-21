@@ -12,10 +12,11 @@
     
     @if($isProduction)
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('build/assets/app.css') }}" rel="stylesheet">
+        <script src="{{ secure_asset('build/assets/app.js') }}" defer></script>
     @else
         <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        @vite('resources/css/app.css')
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
     @endif
 </head>
 <body class="font-sans bg-village-grey">
@@ -69,10 +70,5 @@
             </div>
         </div>
     </footer>
-    <script type="module">
-        import { injectSpeedInsights } from '@vercel/speed-insights';
-
-        injectSpeedInsights();
-    </script>
 </body>
 </html>
