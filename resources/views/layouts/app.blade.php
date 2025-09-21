@@ -5,19 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'The Village Athletica')</title>
     
-    <!-- Force HTTPS for all assets -->
-    @php
-    $isProduction = app()->environment('production');
-    @endphp
-    
-    @if($isProduction)
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        <link href="{{ secure_asset('build/assets/app.css') }}" rel="stylesheet">
-        <script src="{{ secure_asset('build/assets/app.js') }}" defer></script>
-    @else
-        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @endif
+    <!-- Always use Vite, it will handle both development and production -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans bg-village-grey">
     <!-- Header -->
