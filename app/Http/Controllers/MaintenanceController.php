@@ -25,7 +25,7 @@ class MaintenanceController extends Controller
         
         try {
             // Send email using Resend
-            Mail::to('village@steersfam.com')
+            Mail::to('mitchellsteers@gmail.com')
                 ->send(new MaintenanceContactForm($request->all()));
             
             return redirect()->back()->with('success', 'Thank you! We have received your message and will contact you soon.');
