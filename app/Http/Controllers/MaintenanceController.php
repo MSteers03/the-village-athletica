@@ -25,7 +25,7 @@ class MaintenanceController extends Controller
         
         try {
             // Send email using Resend
-            Mail::to('mitchellsteers@gmail.com')
+            Mail::to('info@thevillageathletica.com.au')
                 ->cc('mitchellsteers@gmail.com')
                 ->send(new MaintenanceContactForm($request->all()));
             
