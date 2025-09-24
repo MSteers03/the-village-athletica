@@ -1,7 +1,7 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
-<a href="https://api.checklyhq.com/v1/badges/checks/4cb3c715-7684-47b9-82cd-d1a45fc67893?style=flat&theme=default&responseTime=true"><img src="https://api.checklyhq.com/v1/badges/checks/4cb3c715-7684-47b9-82cd-d1a45fc67893?style=flat&theme=default&responseTime=true" alt="Build Status"></a>
+<a href="https://api.checklyhq.com/v1/badges/checks/4cb3c715-7684-47b9-82cd-d1a45fc67893?style=flat&theme=default"><img src="https://api.checklyhq.com/v1/badges/checks/4cb3c715-7684-47b9-82cd-d1a45fc67893?style=flat&theme=default&responseTime=true" alt="Build Status"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
