@@ -42,7 +42,7 @@
                     Please leave your contact details below and we'll get back to you as soon as we're back online.
                 </p>
                 
-                <form action="{{ route('maintenance.contact') }}" method="POST">
+                <form action="{{ secure_url('/maintenance/contact') }}" method="POST">
                     @csrf
                     
                     <div class="mb-4">
