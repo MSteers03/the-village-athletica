@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta charset="utf-8">
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; }
         .container { max-width: 600px; margin: 0 auto; padding: 20px; }
         .header { background: #ad3925; color: white; padding: 20px; text-align: center; }
-        .content { background: #f9f9f9; padding: 20px; }
+        .content { background: #ece8e7; padding: 20px; }
         .field { margin-bottom: 10px; }
         .label { font-weight: bold; color: #333; }
     </style>
