@@ -4,17 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Under Maintenance - The Village Athletica</title>
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <!-- <style>
-        :root {
-            --village-brown: #ad3925;
-            --village-grey: #ece8e7;
-        }
-        .bg-village-brown { background-color: var(--village-brown); }
-        .text-village-brown { color: var(--village-brown); }
-        .bg-village-grey { background-color: var(--village-grey); }
-    </style> -->
 </head>
 <body class="bg-village-grey min-h-screen flex items-center justify-center">
     <div class="max-w-md w-full mx-4">
