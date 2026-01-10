@@ -16,7 +16,6 @@ class MembershipInquiryController extends Controller
             'email' => 'required|email',
             'phone' => 'required|string|max:20',
             'membership_level' => 'required|string',
-            'message' => 'nullable|string|max:1000',
         ]);
         
         try {
