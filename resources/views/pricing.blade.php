@@ -309,7 +309,7 @@
                     </svg>
                 </summary>
                 <div class="px-6 pb-6 text-gray-600">
-                    <p>Yes! We offer flexible payment options to suit your preferences. You can choose to pay weekly, fortnightly, or monthly.</p>
+                    <p>To make life easy we use Ezi Debit and memberships come out on a fortnightly basis.</p>
                 </div>
             </details>
 
@@ -327,7 +327,7 @@
                     </svg>
                 </summary>
                 <div class="px-6 pb-6 text-gray-600">
-                    <p>While we prefer direct debit for convenience, we can discuss alternative payment methods. Please contact us to arrange the best payment option for you.</p>
+                    <p>Unfortunately we don’t accept cash as a ongoing basis due to us sometime being forgetful and let’s face it…who enjoys asking for money? If Direct Debit is something you are not comfortable with though, we do have other options.</p>
                 </div>
             </details>
 
@@ -345,7 +345,7 @@
                     </svg>
                 </summary>
                 <div class="px-6 pb-6 text-gray-600">
-                    <p>No hidden fees! The price you see is the price you pay. There are no additional transaction fees on top of your membership cost.</p>
+                    <p>There are no little hidden fees, but! If your payment bounce you will be charge $1.65 for a “Missed Payment”</p>
                 </div>
             </details>
 
@@ -363,7 +363,7 @@
                     </svg>
                 </summary>
                 <div class="px-6 pb-6 text-gray-600">
-                    <p>Yes, we understand life happens! You can put your membership on hold if needed. Please contact us to discuss the specifics and duration of the hold period.</p>
+                    <p>Yes absolutely… This isn’t a home loan. All we ask is for the return date so we can set the pause up for you.</p>
                 </div>
             </details>
 
@@ -381,7 +381,7 @@
                     </svg>
                 </summary>
                 <div class="px-6 pb-6 text-gray-600">
-                    <p>Since we have no lock-in contracts, cancellation is simple and straightforward. Just let us know, and we'll process your cancellation. No questions asked, no hassles.</p>
+                    <p>All we ask is for you to send us an email stating why you are cancelling and when you want to stop.</p>
                 </div>
             </details>
 
@@ -399,7 +399,7 @@
                     </svg>
                 </summary>
                 <div class="px-6 pb-6 text-gray-600">
-                    <p>Yes! We offer flexible membership options for FIFO workers. Contact us to discuss a membership plan that works with your roster.</p>
+                    <p>Yes we certainly do. We customise your membership payments to suit your FIFO roster. All you need to do is tell us the dates and we sort out the rest.</p>
                 </div>
             </details>
         </div>
