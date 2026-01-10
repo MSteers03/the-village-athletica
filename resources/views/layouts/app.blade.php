@@ -6,28 +6,26 @@
     <title>@yield('title', 'The Village Athletica')</title>
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
     
-    <!-- Always use Vite, it will handle both development and production -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans bg-village-grey">
     <!-- Header -->
-    <header class="bg-white text-village-brown shadow-md">
+    <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="text-2xl font-bold">The Village Athletica</div>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="/" class="hover:text-blue-200 transition font-bold">Home</a></li>
-                    <li><a href="/timetable" class="hover:text-blue-200 transition font-bold">Timetable</a></li>
-                    <li><a href="/pricing" class="hover:text-blue-200 transition font-bold">Pricing</a></li>
-                    <li><a href="/contact" class="hover:text-blue-200 transition font-bold">Contact</a></li>
+                    <li><a href="/" class="hover:text-red-700 transition font-bold">Home</a></li>
+                    <li><a href="/timetable" class="hover:text-red-700 transition font-bold">Timetable</a></li>
+                    <li><a href="/pricing" class="hover:text-red-700 transition font-bold">Pricing</a></li>
+                    <li><a href="/contact" class="hover:text-red-700 transition font-bold">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
+    <main class="container mx-auto px-4 pb-8">
         @yield('content')
     </main>
 
@@ -42,21 +40,21 @@
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="/" class="hover:text-blue-300 transition">Home</a></li>
-                        <li><a href="/timetable" class="hover:text-blue-300 transition">Timetable</a></li>
-                        <li><a href="/pricing" class="hover:text-blue-300 transition">Pricing</a></li>
-                        <li><a href="/contact" class="hover:text-blue-300 transition">Contact</a></li>
+                        <li><a href="/" class="hover:text-red-200 transition">Home</a></li>
+                        <li><a href="/timetable" class="hover:text-red-200 transition">Timetable</a></li>
+                        <li><a href="/pricing" class="hover:text-red-200 transition">Pricing</a></li>
+                        <li><a href="/contact" class="hover:text-red-200 transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Info</h3>
-                    <p>123 Fitness Street</p>
-                    <p>Healthville, HV 12345</p>
-                    <p>Phone: (555) 123-4567</p>
-                    <p>Email: info@villagegym.com</p>
+                    <p>84 Railway Parade</p>
+                    <p>Midland, WA, 6056</p>
+                    <p><a href="tel:0449523937">Phone: 0449 523 937</a></p>
+                    <p><a href="mailto:info@thevillageathletica.com.au"> Email: info@thevillageathletica.com.au</a></p>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+            <div class="border-t border-red-800 mt-8 pt-6 text-center">
                 <p>&copy; {{ date('Y') }} The Village Athletica. All rights reserved.</p>
             </div>
         </div>
