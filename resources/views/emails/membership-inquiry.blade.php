@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <meta charset="utf-8">
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; }
