@@ -217,10 +217,10 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition bg-white"
                         >
                             <option value="">What best describes your interest?</option>
-                            <option value="membership">Membership Information</option>
-                            <option value="trial">Free Trial Class</option>
-                            <option value="personal">Personal Training</option>
-                            <option value="group">Group Classes</option>
+                            <option value="loseWeight">I want to lose weight</option>
+                            <option value="improveCompetitivePerformance">I want to improve competitive performance</option>
+                            <option value="gainStrength">I want to gain strength</option>
+                            <option value="improveGeneralHealth">I want to improve my general health</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -237,10 +237,11 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition bg-white"
                         >
                             <option value="">What describes your CrossFit experience level best?</option>
-                            <option value="beginner">Beginner - New to fitness</option>
-                            <option value="intermediate">Intermediate - Some experience</option>
-                            <option value="advanced">Advanced - Regular training</option>
-                            <option value="athlete">Athlete - Competitive level</option>
+                            <option value="newToCrossfit">New to CrossFit</option>
+                            <option value="standardGym">Currently training at a standard gym</option>
+                            <option value="notCurrently">Not currently doing any fitness training</option>
+                            <option value="noExperience">No past fitness experience</option>
+                            <option value="solo">Currently doing my own training</option>
                         </select>
                     </div>
 
@@ -256,10 +257,11 @@
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition bg-white"
                         >
                             <option value="">How did you hear about us?</option>
-                            <option value="google">Google Search</option>
-                            <option value="social">Social Media</option>
-                            <option value="friend">Friend/Family Referral</option>
-                            <option value="drove">Drove/Walked Past</option>
+                            <option value="referral">Referral</option>
+                            <option value="google">Google</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="inTheArea">I was in the area and saw your facility</option>
                             <option value="other">Other</option>
                         </select>
                     </div>
@@ -378,11 +380,12 @@
                 <div class="space-y-3 text-sm">
                     <div class="flex justify-between">
                         <span class="font-semibold">Monday - Friday</span>
-                        <span>5:30 AM - 7:30 PM</span>
+                        <span>5:30 AM - 10:30 AM</span>
+                        <span>4:30 PM - 6:30 PM</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="font-semibold">Saturday</span>
-                        <span>7:00 AM - 12:00 PM</span>
+                        <span>7:00 AM - 9:00 AM</span>
                     </div>
                     <div class="flex justify-between">
                         <span class="font-semibold">Sunday</span>
