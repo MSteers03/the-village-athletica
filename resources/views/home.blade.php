@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'The Village Athletica - CrossFit Gym in Midland, Perth')
+@section('title', 'The Village Athletica')
 
 @section('content')
 <!-- Hero Section -->
