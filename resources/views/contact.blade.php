@@ -11,12 +11,84 @@
     </div>
 </div>
 
+<div x-data="{
+    formData: {
+        first_name: '',
+        last_name: '',
+        email: '',
+        phone: '',
+        interest: '',
+        experience: '',
+        referral: '',
+        comments: '',
+        no_promotions: false
+    },
+    isSubmitting: false,
+    submitStatus: { show: false, type: '', message: '' },
+    async submitForm() {
+        this.isSubmitting = true;
+        this.submitStatus.show = false;
+        
+        try {
+            const response = await fetch('{{ route('contact.submit') }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(this.formData)
+            });
+            
+            const data = await response.json();
+            
+            if (data.success) {
+                this.submitStatus = {
+                    show: true,
+                    type: 'success',
+                    message: data.message
+                };
+                
+                // Reset form
+                this.formData = {
+                    first_name: '',
+                    last_name: '',
+                    email: '',
+                    phone: '',
+                    interest: '',
+                    experience: '',
+                    referral: '',
+                    comments: '',
+                    no_promotions: false
+                };
+                
+                // Scroll to top of form to see success message
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            } else {
+                this.submitStatus = {
+                    show: true,
+                    type: 'error',
+                    message: data.message
+                };
+            }
+        } catch (error) {
+            this.submitStatus = {
+                show: true,
+                type: 'error',
+                message: 'An error occurred. Please try again.'
+            };
+        } finally {
+            this.isSubmitting = false;
+        }
+    }
+}">
+
 <!-- Google Maps Section -->
 <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen mb-16">
     <div class="relative h-96 bg-gray-200">
         <!-- Google Maps Embed -->
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.8513374492286!2d116.00295557808226!3d-31.891691725618404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b9bb61410b09%3A0xd69114e128638e60!2sThe%20Village%20Athletica!5e1!3m2!1sen!2sau!4v1768026809414!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.8513374492286!2d116.00295557808226!3d-31.891691725618404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b9bb61410b09%3A0xd69114e128638e60!2sThe%20Village%20Athletica!5e1!3m2!1sen!2sau!4v1768026809414!5m2!1sen!2sau"
             class="absolute inset-0 w-full h-full"
             style="border:0;" 
             allowfullscreen="" 
@@ -45,8 +117,14 @@
                 </p>
                 <p class="text-sm text-gray-500 mb-6">* indicates required fields</p>
 
-                <form action="#" method="POST" class="space-y-6">
-                    @csrf
+                <form @submit.prevent="submitForm" class="space-y-6">
+                    <!-- Success/Error Message -->
+                    <div x-show="submitStatus.show" 
+                         x-transition
+                         :class="submitStatus.type === 'success' ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'"
+                         class="p-4 rounded-lg border text-sm mb-6">
+                        <span x-text="submitStatus.message"></span>
+                    </div>
                     
                     <!-- First Name -->
                     <div>
@@ -56,7 +134,8 @@
                         <input 
                             type="text" 
                             id="first_name" 
-                            name="first_name" 
+                            name="first_name"
+                            x-model="formData.first_name"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="First Name"
@@ -71,7 +150,8 @@
                         <input 
                             type="text" 
                             id="last_name" 
-                            name="last_name" 
+                            name="last_name"
+                            x-model="formData.last_name"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="Last Name"
@@ -86,7 +166,8 @@
                         <input 
                             type="email" 
                             id="email" 
-                            name="email" 
+                            name="email"
+                            x-model="formData.email"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="Email"
@@ -101,7 +182,8 @@
                         <input 
                             type="tel" 
                             id="phone" 
-                            name="phone" 
+                            name="phone"
+                            x-model="formData.phone"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="Phone"
@@ -116,6 +198,7 @@
                         <select 
                             id="interest" 
                             name="interest"
+                            x-model="formData.interest"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition bg-white"
                         >
                             <option value="">What best describes your interest?</option>
@@ -135,6 +218,7 @@
                         <select 
                             id="experience" 
                             name="experience"
+                            x-model="formData.experience"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition bg-white"
                         >
                             <option value="">What describes your CrossFit experience level best?</option>
@@ -153,6 +237,7 @@
                         <select 
                             id="referral" 
                             name="referral"
+                            x-model="formData.referral"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition bg-white"
                         >
                             <option value="">How did you hear about us?</option>
@@ -171,7 +256,8 @@
                         </label>
                         <textarea 
                             id="comments" 
-                            name="comments" 
+                            name="comments"
+                            x-model="formData.comments"
                             rows="6"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition resize-none"
                             placeholder="Your comments and questions"
@@ -184,6 +270,7 @@
                             type="checkbox" 
                             id="no_promotions" 
                             name="no_promotions"
+                            x-model="formData.no_promotions"
                             class="mt-1 h-4 w-4 text-village-brown focus:ring-village-brown border-gray-300 rounded"
                         >
                         <label for="no_promotions" class="ml-3 text-sm text-gray-600">
@@ -201,9 +288,12 @@
                     <div>
                         <button 
                             type="submit"
+                            :disabled="isSubmitting"
+                            :class="isSubmitting ? 'opacity-50 cursor-not-allowed' : ''"
                             class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white px-8 py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                         >
-                            SUBMIT
+                            <span x-show="!isSubmitting">SUBMIT</span>
+                            <span x-show="isSubmitting">SENDING...</span>
                         </button>
                     </div>
                 </form>
@@ -274,7 +364,7 @@
                 </div>
             </div>
 
-            <!-- Opening Hours (Optional - you can add this if needed) -->
+            <!-- Opening Hours -->
             <div class="bg-gradient-to-br from-village-brown to-red-900 text-white rounded-2xl shadow-xl p-8">
                 <h3 class="text-2xl font-bold mb-6">Opening Hours</h3>
                 <div class="space-y-3 text-sm">
@@ -295,4 +385,11 @@
         </div>
     </div>
 </div>
+</div>
+
+<style>
+    [x-cloak] {
+        display: none !important;
+    }
+</style>
 @endsection

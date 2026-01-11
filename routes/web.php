@@ -3,11 +3,16 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckMaintenance;
 use App\Http\Controllers\MembershipInquiryController;
+use App\Http\Controllers\ContactFormController;
 
 // Maintenance mode routes (always accessible)
 Route::get('/maintenance', [App\Http\Controllers\MaintenanceController::class, 'show'])->name('maintenance');
 Route::post('/maintenance/contact', [App\Http\Controllers\MaintenanceController::class, 'submitContactForm'])->name('maintenance.contact');
+
 Route::post('/membership-inquiry', [App\Http\Controllers\MembershipInquiryController::class, 'submit'])->name('membership.inquiry');
+
+Route::get('/contact', [ContactFormController::class, 'show'])->name('contact');
+Route::post('/contact-submit', [ContactFormController::class, 'submit'])->name('contact.submit');
 
 // Apply maintenance mode middleware to all other routes
 Route::middleware([CheckMaintenance::class])->group(function () {
