@@ -32,13 +32,13 @@
     async submitForm() {
         this.isSubmitting = true;
         this.submitStatus.show = false;
-        
+
         try {
             // Generate reCAPTCHA token
             const token = await grecaptcha.execute('{{ config('services.recaptcha.site_key') }}', {
                 action: 'contact_form'
             });
-            
+
             const response = await fetch('{{ route('contact.submit') }}', {
                 method: 'POST',
                 headers: {
@@ -51,16 +51,16 @@
                     recaptcha_token: token
                 })
             });
-            
+
             const data = await response.json();
-            
+
             if (data.success) {
                 this.submitStatus = {
                     show: true,
                     type: 'success',
                     message: data.message
                 };
-                
+
                 // Reset form
                 this.formData = {
                     first_name: '',
@@ -73,7 +73,7 @@
                     comments: '',
                     no_promotions: false
                 };
-                
+
                 // Scroll to the form to see success message
                 const formElement = document.querySelector('form');
                 if (formElement) {
@@ -294,10 +294,6 @@
                     </div>
 
                     <!-- reCAPTCHA Placeholder -->
-                    <div class="bg-gray-100 border border-gray-300 rounded-lg p-4 text-center text-gray-500">
-                        <p class="text-sm">reCAPTCHA will be placed here</p>
-                        <p class="text-xs mt-1">(Integration required)</p>
-                    </div>
                     <div class="text-xs text-gray-500 text-center">
                         This site is protected by reCAPTCHA and the Google
                         <a href="https://policies.google.com/privacy" class="text-village-brown hover:underline" target="_blank">Privacy Policy</a> and
