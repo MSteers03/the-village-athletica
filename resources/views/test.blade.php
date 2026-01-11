@@ -173,9 +173,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Modal - Now OUTSIDE the grid, at the root level -->
-    <!-- This prevents any positioning conflicts with the card layout -->
     <div x-show="showModal" 
          x-cloak
          @keydown.escape.window="showModal = false"
