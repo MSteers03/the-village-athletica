@@ -249,7 +249,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-                        <!-- Functional Fitness -->
+            <!-- Functional Fitness -->
             <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-village-brown to-red-800 rounded-xl flex items-center justify-center mr-4">
@@ -259,6 +259,7 @@
                 </div>
                 <p class="text-gray-700 leading-relaxed">60-minute full-body workout focusing on functional movements that improve your everyday life. Suitable for all fitness levels.</p>
             </div>
+
             <!-- HIRT -->
             <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
                 <div class="flex items-center mb-4">
