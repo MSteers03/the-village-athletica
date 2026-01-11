@@ -171,9 +171,9 @@
                     </li>
                 </ul>
                 <p class="text-sm text-gray-500 italic mb-6 text-center">Can use 2 x HIRT classes as 1 session</p>
-                <button class="w-full bg-gradient-to-r from-village-brown to-red-900 text-white py-4 rounded-xl hover:from-red-900 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                    Get Started
-                </button>
+                    <button @click="showModal = true; selectedLevel = 'Level 2'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Get Started
+                    </button>
             </div>
         </div>
 
@@ -218,9 +218,9 @@
                     </li>
                 </ul>
                 <div class="mb-6 h-6"></div>
-                <button class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                    Get Started
-                </button>
+                    <button @click="showModal = true; selectedLevel = 'Level 3'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Get Started
+                    </button>
             </div>
         </div>
     </div>
@@ -249,7 +249,7 @@
                             <p class="font-semibold text-village-brown">✓ No Joining Fee</p>
                         </div>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-3 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold shadow-lg hover:shadow-xl">
+                    <button @click="showModal = true; selectedLevel = 'HIRT'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -268,7 +268,7 @@
                         <p>Structured to suit your individual needs. In these one-on-one sessions, the trainers' attention is fully focused on you.</p>
                         <p class="text-village-brown font-semibold">Dive deeper into your goals</p>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-3 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold shadow-lg hover:shadow-xl">
+                    <button @click="showModal = true; selectedLevel = 'Personal Coaching'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -291,7 +291,7 @@
                             <p class="font-semibold text-village-brown">✓ 12 Week Expiry</p>
                         </div>
                     </div>
-                    <button class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-3 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold shadow-lg hover:shadow-xl">
+                    <button @click="showModal = true; selectedLevel = '10-Pack'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
