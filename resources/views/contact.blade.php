@@ -2,6 +2,10 @@
 
 @section('title', 'Contact - The Village Athletica')
 
+@push('scripts')
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+@endpush
+
 @section('content')
 <!-- Hero Section -->
 <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-village-brown to-red-900 text-white py-20 mb-16">
@@ -30,6 +34,11 @@
         this.submitStatus.show = false;
         
         try {
+            // Generate reCAPTCHA token
+            const token = await grecaptcha.execute('{{ config('services.recaptcha.site_key') }}', {
+                action: 'contact_form'
+            });
+            
             const response = await fetch('{{ route('contact.submit') }}', {
                 method: 'POST',
                 headers: {
@@ -37,7 +46,10 @@
                     'X-CSRF-TOKEN': '{{ csrf_token() }}',
                     'Accept': 'application/json'
                 },
-                body: JSON.stringify(this.formData)
+                body: JSON.stringify({
+                    ...this.formData,
+                    recaptcha_token: token
+                })
             });
             
             const data = await response.json();
@@ -62,8 +74,11 @@
                     no_promotions: false
                 };
                 
-                // Scroll to top of form to see success message
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                // Scroll to the form to see success message
+                const formElement = document.querySelector('form');
+                if (formElement) {
+                    formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             } else {
                 this.submitStatus = {
                     show: true,
@@ -282,6 +297,11 @@
                     <div class="bg-gray-100 border border-gray-300 rounded-lg p-4 text-center text-gray-500">
                         <p class="text-sm">reCAPTCHA will be placed here</p>
                         <p class="text-xs mt-1">(Integration required)</p>
+                    </div>
+                    <div class="text-xs text-gray-500 text-center">
+                        This site is protected by reCAPTCHA and the Google
+                        <a href="https://policies.google.com/privacy" class="text-village-brown hover:underline" target="_blank">Privacy Policy</a> and
+                        <a href="https://policies.google.com/terms" class="text-village-brown hover:underline" target="_blank">Terms of Service</a> apply.
                     </div>
 
                     <!-- Submit Button -->
