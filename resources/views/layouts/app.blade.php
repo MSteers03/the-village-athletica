@@ -26,12 +26,12 @@
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4 pb-8">
+    <main class="container mx-auto px-4">
         @yield('content')
     </main>
 
     <!-- Footer -->
-    <footer class="bg-village-brown text-white py-8 mt-12">
+    <footer class="bg-village-brown text-white py-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>

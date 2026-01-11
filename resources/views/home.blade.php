@@ -1,126 +1,219 @@
 @extends('layouts.app')
 
-@section('title', 'Pricing - The Village Athletica')
+@section('title', 'The Village Athletica - CrossFit Gym in Midland, Perth')
 
 @section('content')
-<div class="text-center mb-12">
-    <h1 class="text-4xl font-bold text-blue-800 mb-4">Join the Village</h1>
-    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the plan that works best for your fitness journey. All plans include access to our premium equipment and basic amenities.</p>
+<!-- Hero Section -->
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-32 mb-16">
+    <div class="max-w-6xl mx-auto px-8 text-center">
+        <h1 class="text-7xl font-bold mb-6 leading-tight">STOP EXERCISING<br>START TRAINING!</h1>
+        <p class="text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            It's not motivation, it's dedication.
+        </p>
+    </div>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- Basic Plan -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-        <div class="bg-blue-600 text-white py-4 px-6">
-            <h2 class="text-2xl font-bold">Basic</h2>
-            <p class="text-blue-100">Perfect for casual gym-goers</p>
+<!-- About Section -->
+<div class="max-w-7xl mx-auto mb-24 px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column - Text -->
+        <div class="text-center lg:text-left">
+            <h2 class="text-5xl font-bold text-gray-900 mb-6">Want To Get Fit?</h2>
+            <h3 class="text-3xl font-bold text-village-brown mb-8">Join The Fittest Gym In Midland</h3>
+            
+            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                The Village is an inclusive fitness community where your age, or fitness level does not define you. With commitment and diligence anyone can benefit from Functional Fitness and achieve their fitness goals.
+            </p>
+            
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                We coach our athletes to push past their often self-imposed physical and mental confines. Together, we learn the techniques, put in the hard work and build belief to overcome the obstacles. We want you to be the best version of yourself.
+            </p>
+            
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                Take that step today.
+            </p>
+            
+            <a href="/contact" class="inline-block bg-black text-white px-10 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
+                CLICK HERE!
+            </a>
         </div>
-        <div class="p-6">
-            <p class="text-4xl font-bold text-gray-800 mb-4">$29<span class="text-lg text-gray-600">/month</span></p>
-            <ul class="space-y-3 mb-6">
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Access to cardio equipment
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Free weights area
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Locker room access
-                </li>
-                <li class="flex items-center text-gray-400">
-                    <svg class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                    </svg>
-                    Group classes
-                </li>
-            </ul>
-            <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">Select Plan</button>
-        </div>
-    </div>
-
-    <!-- Pro Plan -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden border-2 border-blue-600 transition-transform duration-300 hover:scale-105">
-        <div class="bg-blue-800 text-white py-4 px-6">
-            <h2 class="text-2xl font-bold">Pro</h2>
-            <p class="text-blue-200">Our most popular plan</p>
-        </div>
-        <div class="p-6">
-            <p class="text-4xl font-bold text-gray-800 mb-4">$49<span class="text-lg text-gray-600">/month</span></p>
-            <ul class="space-y-3 mb-6">
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    All Basic features
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Unlimited group classes
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Free fitness assessment
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Towel service
-                </li>
-            </ul>
-            <button class="w-full bg-blue-800 text-white py-2 rounded-md hover:bg-blue-900 transition">Select Plan</button>
-        </div>
-    </div>
-
-    <!-- Premium Plan -->
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-        <div class="bg-blue-600 text-white py-4 px-6">
-            <h2 class="text-2xl font-bold">Premium</h2>
-            <p class="text-blue-100">For the serious fitness enthusiast</p>
-        </div>
-        <div class="p-6">
-            <p class="text-4xl font-bold text-gray-800 mb-4">$79<span class="text-lg text-gray-600">/month</span></p>
-            <ul class="space-y-3 mb-6">
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    All Pro features
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    24/7 access
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Personal trainer discount
-                </li>
-                <li class="flex items-center">
-                    <svg class="h-5 w-5 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Bring a guest twice per month
-                </li>
-            </ul>
-            <button class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">Select Plan</button>
+        
+        <!-- Right Column - Video/Image Placeholder -->
+        <div class="bg-gray-200 rounded-2xl aspect-video flex items-center justify-center">
+            <div class="text-center text-gray-500">
+                <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <p class="text-lg">Video will be placed here</p>
+            </div>
         </div>
     </div>
 </div>
+
+<!-- Memberships Section -->
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-village-grey py-20 mb-24">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <!-- Left Column - Text -->
+            <div class="text-center lg:text-left">
+                <h2 class="text-5xl font-bold text-gray-900 mb-8">MEMBERSHIPS</h2>
+                
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Your membership will be determined by how many sessions per week you'd like to attend. Each session is lead by one of our coaches to help you improve each time you attend a class.
+                </p>
+                
+                <a href="/pricing" class="inline-flex items-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    I'M INTERESTED
+                </a>
+            </div>
+            
+            <!-- Right Column - Image Placeholder -->
+            <div class="bg-gray-300 rounded-2xl aspect-[3/4] flex items-center justify-center">
+                <div class="text-center text-gray-600">
+                    <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    <p class="text-lg">Training Image</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- What You Get Section -->
+<div class="max-w-7xl mx-auto mb-24 px-4">
+    <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-gray-900 mb-4">You'll Love Training With Us</h2>
+        <h3 class="text-3xl font-bold text-village-brown">What You Get At The Village</h3>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <!-- Tailored Programs -->
+        <div class="text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-20 h-20 bg-white border-4 border-village-brown rounded-2xl flex items-center justify-center">
+                    <svg class="w-12 h-12 text-village-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">TAILORED FITNESS PROGRAMS</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Every workout we offer is programmed and tailored specifically to your ability and fitness goals. That's right – every class! Whatever your fitness level, we'll tailor a program to help you to safely and steadily improve more on your fitness goals.
+            </p>
+        </div>
+
+        <!-- Specialised Coaching -->
+        <div class="text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-20 h-20 bg-white border-4 border-village-brown rounded-2xl flex items-center justify-center">
+                    <svg class="w-12 h-12 text-village-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">SPECIALISED COACHING EVERY SESSION</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Our professionally trained and expert coaches actively coach each class that you attend. Personal coaching like this would normally cost a fortune in traditional gyms, but here at The Village, the coaching session is included in all our memberships.
+            </p>
+        </div>
+
+        <!-- Functional Training -->
+        <div class="text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-20 h-20 bg-white border-4 border-village-brown rounded-2xl flex items-center justify-center">
+                    <svg class="w-12 h-12 text-village-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+                    </svg>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">MULTIDISCIPLINARY FUNCTIONAL TRAINING</h3>
+            <p class="text-gray-700 leading-relaxed">
+                Our program uses functional movements that your body is naturally designed to do, combining elements of cardio, gymnastics, weightlifting, cycling, rowing, and more to improve your overall fitness in a balanced way.
+            </p>
+        </div>
+
+        <!-- Friendship -->
+        <div class="text-center">
+            <div class="flex justify-center mb-6">
+                <div class="w-20 h-20 bg-white border-4 border-village-brown rounded-2xl flex items-center justify-center">
+                    <svg class="w-12 h-12 text-village-brown" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                </div>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">FRIENDSHIP & ACCOUNTABILITY</h3>
+            <p class="text-gray-700 leading-relaxed">
+                At The Village, our community is our greatest strength. You'll make lifelong friends to help inspire, challenge and motivate you. We train together, socialise together, and inspire each other to do our best and achieve our best!
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Benefits Section -->
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-white py-20 mb-0">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <!-- On Premises Café -->
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-village-brown rounded-2xl flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">ON PREMISES CAFÉ</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Love coffee as much as we do? We are lucky enough to share our complex with Midland's most popular café, The Crooked Spire. Sit back and enjoy a post-workout coffee with friends.
+                </p>
+            </div>
+
+            <!-- Passionate Staff -->
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-village-brown rounded-2xl flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">PASSIONATE STAFF</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    Every member of the team lives a healthy active lifestyle. Our vibrant and enthusiastic staff will definitely inspire you to make the change you've always wanted.
+                </p>
+            </div>
+
+            <!-- Convenient Location -->
+            <div class="text-center">
+                <div class="flex justify-center mb-6">
+                    <div class="w-20 h-20 bg-village-brown rounded-2xl flex items-center justify-center">
+                        <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">CONVENIENT LOCATION</h3>
+                <p class="text-gray-700 leading-relaxed">
+                    In the heart of Midland, we are located next to the main transport hub, with the Midland Gate only 750m away we're also conveniently centred in the business district.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA Section -->
+<div class="text-center py-20 max-w-4xl mx-auto px-4">
+    <h2 class="text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
+    <p class="text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
+    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-12 py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
+        Contact Us Now →
+    </a>
+</div>
+
 @endsection
