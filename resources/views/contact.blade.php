@@ -292,14 +292,6 @@
                             I DO NOT want to receive special offers and promotions from The Village Athletica
                         </label>
                     </div>
-
-                    <!-- reCAPTCHA Placeholder -->
-                    <div class="text-xs text-gray-500 text-center">
-                        This site is protected by reCAPTCHA and the Google
-                        <a href="https://policies.google.com/privacy" class="text-village-brown hover:underline" target="_blank">Privacy Policy</a> and
-                        <a href="https://policies.google.com/terms" class="text-village-brown hover:underline" target="_blank">Terms of Service</a> apply.
-                    </div>
-
                     <!-- Submit Button -->
                     <div>
                         <button 
