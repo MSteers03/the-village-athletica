@@ -57,39 +57,23 @@
 </div>
 
 
+@php
+    $athletes = [
+        'jess', 'craig', 'kirk', 'tash', 'thor', 'tui', 'matt', 
+        'blake', 'kyle', 'rob', 'gaz', 'kyle-g', 'athlete', 'castell'
+    ];
+@endphp
+
 <div class="relative w-full overflow-hidden py-8">
     <!-- Carousel container -->
     <div id="athlete-carousel" class="flex gap-6 transition-transform duration-700 ease-in-out px-4">
-        <!-- Item 1 -->
+        @foreach($athletes as $athlete)
         <div class="flex-shrink-0 w-64 md:w-80">
             <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <x-cloudinary::image public-id="samples/canvas" class="w-full h-full object-cover" alt="Athlete 1"/>
+                <x-cloudinary::image public-id="{{ $athlete }}" class="w-full h-full object-cover" alt="Athlete {{ $loop->iteration }}"/>
             </div>
         </div>
-        <!-- Item 2 -->
-        <div class="flex-shrink-0 w-64 md:w-80">
-            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <x-cloudinary::image public-id="cld-sample-5" class="w-full h-full object-cover" alt="Athlete 2"/>
-            </div>
-        </div>
-        <!-- Item 3 -->
-        <div class="flex-shrink-0 w-64 md:w-80">
-            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <x-cloudinary::image public-id="main-sample" class="w-full h-full object-cover" alt="Athlete 3"/>
-            </div>
-        </div>
-        <!-- Item 4 -->
-        <div class="flex-shrink-0 w-64 md:w-80">
-            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <x-cloudinary::image public-id="cld-sample-3" class="w-full h-full object-cover" alt="Athlete 4"/>
-            </div>
-        </div>
-        <!-- Item 5 -->
-        <div class="flex-shrink-0 w-64 md:w-80">
-            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <x-cloudinary::image public-id="cld-sample-2" class="w-full h-full object-cover" alt="Athlete 5"/>
-            </div>
-        </div>
+        @endforeach
     </div>
 
     <!-- Navigation Buttons -->
@@ -106,159 +90,9 @@
         </svg>
         <span class="sr-only">Next</span>
     </button>
-
-    <!-- Indicators -->
-    <div class="flex justify-center gap-2 mt-6">
-        <button class="indicator w-3 h-3 rounded-full bg-gray-800 transition-all" data-index="0"></button>
-        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="1"></button>
-        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="2"></button>
-        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="3"></button>
-        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="4"></button>
-    </div>
 </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const carousel = document.getElementById('athlete-carousel');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const indicators = document.querySelectorAll('.indicator');
-    const originalItems = Array.from(carousel.children);
-    let currentIndex = 0;
-    let autoScrollInterval;
-    let isTransitioning = false;
-
-    // Clone items for infinite loop
-    function setupInfiniteLoop() {
-        // Clone all items and append to the end
-        originalItems.forEach(item => {
-            const clone = item.cloneNode(true);
-            carousel.appendChild(clone);
-        });
-        
-        // Clone all items and prepend to the beginning
-        originalItems.slice().reverse().forEach(item => {
-            const clone = item.cloneNode(true);
-            carousel.insertBefore(clone, carousel.firstChild);
-        });
-        
-        // Start at the "real" first item (after prepended clones)
-        currentIndex = originalItems.length;
-        carousel.style.transform = `translateX(-${currentIndex * getItemWidth()}px)`;
-        carousel.style.transition = 'none';
-    }
-
-    function getItemWidth() {
-        return carousel.children[0].offsetWidth + 24; // width + gap
-    }
-
-    function updateIndicators(index) {
-        // Map actual index to original items (0-4)
-        const mappedIndex = index % originalItems.length;
-        
-        indicators.forEach((indicator, i) => {
-            if (i === mappedIndex) {
-                indicator.classList.remove('bg-gray-400');
-                indicator.classList.add('bg-gray-800');
-            } else {
-                indicator.classList.remove('bg-gray-800');
-                indicator.classList.add('bg-gray-400');
-            }
-        });
-    }
-
-    function scrollToIndex(index, smooth = true) {
-        if (isTransitioning) return;
-        
-        isTransitioning = true;
-        const itemWidth = getItemWidth();
-        
-        if (smooth) {
-            carousel.style.transition = 'transform 700ms ease-in-out';
-        } else {
-            carousel.style.transition = 'none';
-        }
-        
-        carousel.style.transform = `translateX(-${index * itemWidth}px)`;
-        currentIndex = index;
-        
-        updateIndicators(index);
-        
-        setTimeout(() => {
-            isTransitioning = false;
-        }, 700);
-    }
-
-    function handleInfiniteLoop() {
-        const totalItems = carousel.children.length;
-        const originalLength = originalItems.length;
-        
-        // If we're at or past the end clones, jump to real items
-        if (currentIndex >= originalLength * 2) {
-            currentIndex = originalLength;
-            scrollToIndex(currentIndex, false);
-        }
-        
-        // If we're at or before the start clones, jump to real items
-        if (currentIndex < originalLength) {
-            currentIndex = originalLength * 2 - 1;
-            scrollToIndex(currentIndex, false);
-        }
-    }
-
-    function nextSlide() {
-        scrollToIndex(currentIndex + 1);
-        setTimeout(handleInfiniteLoop, 750);
-    }
-
-    function prevSlide() {
-        scrollToIndex(currentIndex - 1);
-        setTimeout(handleInfiniteLoop, 750);
-    }
-
-    // Button controls
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoScroll();
-    });
-
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoScroll();
-    });
-
-    // Indicator controls
-    indicators.forEach((indicator, index) => {
-        indicator.addEventListener('click', () => {
-            scrollToIndex(originalItems.length + index);
-            resetAutoScroll();
-        });
-    });
-
-    // Auto-scroll functionality
-    function startAutoScroll() {
-        autoScrollInterval = setInterval(nextSlide, 5000);
-    }
-
-    function resetAutoScroll() {
-        clearInterval(autoScrollInterval);
-        startAutoScroll();
-    }
-
-    // Initialize
-    setupInfiniteLoop();
-    startAutoScroll();
-
-    // Pause on hover
-    carousel.parentElement.addEventListener('mouseenter', () => {
-        clearInterval(autoScrollInterval);
-    });
-
-    carousel.parentElement.addEventListener('mouseleave', () => {
-        startAutoScroll();
-    });
-});
-</script>
+<script src="{{ asset('js/carousel.js') }}"></script>
 
 <!-- What You Get Section -->
 <div class="max-w-7xl mx-auto mb-24 px-4">
