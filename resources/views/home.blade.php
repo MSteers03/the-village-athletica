@@ -39,50 +39,226 @@
         </div>
         
         <!-- Right Column - Video/Image Placeholder -->
-        <div class="bg-gray-200 rounded-2xl aspect-video flex items-center justify-center">
-            <div class="text-center text-gray-500">
-                <svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        <div class="text-center lg:text-left">
+            <h2 class="text-5xl font-bold text-gray-900 mb-8">MEMBERSHIPS</h2>
+            
+            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                Your membership will be determined by how many sessions per week you'd like to attend. Each session is lead by one of our coaches to help you improve each time you attend a class.
+            </p>
+            
+            <a href="/pricing" class="inline-flex items-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
+                <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
-                <p class="text-lg">Video will be placed here</p>
-            </div>
+                I'M INTERESTED
+            </a>
         </div>
     </div>
 </div>
 
-<!-- Memberships Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-village-grey py-20 mb-24">
-    <div class="max-w-7xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <!-- Left Column - Text -->
-            <div class="text-center lg:text-left">
-                <h2 class="text-5xl font-bold text-gray-900 mb-8">MEMBERSHIPS</h2>
-                
-                <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                    Your membership will be determined by how many sessions per week you'd like to attend. Each session is lead by one of our coaches to help you improve each time you attend a class.
-                </p>
-                
-                <a href="/pricing" class="inline-flex items-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
-                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                    </svg>
-                    I'M INTERESTED
-                </a>
+
+<div class="relative w-full overflow-hidden py-8">
+    <!-- Carousel container -->
+    <div id="athlete-carousel" class="flex gap-6 transition-transform duration-700 ease-in-out px-4">
+        <!-- Item 1 -->
+        <div class="flex-shrink-0 w-64 md:w-80">
+            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <x-cloudinary::image public-id="samples/canvas" class="w-full h-full object-cover" alt="Athlete 1"/>
             </div>
-            
-            <!-- Right Column - Image Placeholder -->
-            <div class="bg-gray-300 rounded-2xl aspect-[3/4] flex items-center justify-center">
-                <div class="text-center text-gray-600">
-                    <!--<svg class="w-24 h-24 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg>-->
-                    <x-cloudinary::image public-id="headshot_ftizhb" width="1000" height="10" />
-                </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="flex-shrink-0 w-64 md:w-80">
+            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <x-cloudinary::image public-id="cld-sample-5" class="w-full h-full object-cover" alt="Athlete 2"/>
+            </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="flex-shrink-0 w-64 md:w-80">
+            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <x-cloudinary::image public-id="main-sample" class="w-full h-full object-cover" alt="Athlete 3"/>
+            </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="flex-shrink-0 w-64 md:w-80">
+            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <x-cloudinary::image public-id="cld-sample-3" class="w-full h-full object-cover" alt="Athlete 4"/>
+            </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="flex-shrink-0 w-64 md:w-80">
+            <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
+                <x-cloudinary::image public-id="cld-sample-2" class="w-full h-full object-cover" alt="Athlete 5"/>
             </div>
         </div>
     </div>
+
+    <!-- Navigation Buttons -->
+    <button type="button" id="prev-btn" class="absolute left-2 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-12 h-12 rounded-full bg-black/50 hover:bg-black/70 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+        </svg>
+        <span class="sr-only">Previous</span>
+    </button>
+    
+    <button type="button" id="next-btn" class="absolute right-2 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-12 h-12 rounded-full bg-black/50 hover:bg-black/70 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        <span class="sr-only">Next</span>
+    </button>
+
+    <!-- Indicators -->
+    <div class="flex justify-center gap-2 mt-6">
+        <button class="indicator w-3 h-3 rounded-full bg-gray-800 transition-all" data-index="0"></button>
+        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="1"></button>
+        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="2"></button>
+        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="3"></button>
+        <button class="indicator w-3 h-3 rounded-full bg-gray-400 transition-all" data-index="4"></button>
+    </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('athlete-carousel');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const indicators = document.querySelectorAll('.indicator');
+    const originalItems = Array.from(carousel.children);
+    let currentIndex = 0;
+    let autoScrollInterval;
+    let isTransitioning = false;
+
+    // Clone items for infinite loop
+    function setupInfiniteLoop() {
+        // Clone all items and append to the end
+        originalItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            carousel.appendChild(clone);
+        });
+        
+        // Clone all items and prepend to the beginning
+        originalItems.slice().reverse().forEach(item => {
+            const clone = item.cloneNode(true);
+            carousel.insertBefore(clone, carousel.firstChild);
+        });
+        
+        // Start at the "real" first item (after prepended clones)
+        currentIndex = originalItems.length;
+        carousel.style.transform = `translateX(-${currentIndex * getItemWidth()}px)`;
+        carousel.style.transition = 'none';
+    }
+
+    function getItemWidth() {
+        return carousel.children[0].offsetWidth + 24; // width + gap
+    }
+
+    function updateIndicators(index) {
+        // Map actual index to original items (0-4)
+        const mappedIndex = index % originalItems.length;
+        
+        indicators.forEach((indicator, i) => {
+            if (i === mappedIndex) {
+                indicator.classList.remove('bg-gray-400');
+                indicator.classList.add('bg-gray-800');
+            } else {
+                indicator.classList.remove('bg-gray-800');
+                indicator.classList.add('bg-gray-400');
+            }
+        });
+    }
+
+    function scrollToIndex(index, smooth = true) {
+        if (isTransitioning) return;
+        
+        isTransitioning = true;
+        const itemWidth = getItemWidth();
+        
+        if (smooth) {
+            carousel.style.transition = 'transform 700ms ease-in-out';
+        } else {
+            carousel.style.transition = 'none';
+        }
+        
+        carousel.style.transform = `translateX(-${index * itemWidth}px)`;
+        currentIndex = index;
+        
+        updateIndicators(index);
+        
+        setTimeout(() => {
+            isTransitioning = false;
+        }, 700);
+    }
+
+    function handleInfiniteLoop() {
+        const totalItems = carousel.children.length;
+        const originalLength = originalItems.length;
+        
+        // If we're at or past the end clones, jump to real items
+        if (currentIndex >= originalLength * 2) {
+            currentIndex = originalLength;
+            scrollToIndex(currentIndex, false);
+        }
+        
+        // If we're at or before the start clones, jump to real items
+        if (currentIndex < originalLength) {
+            currentIndex = originalLength * 2 - 1;
+            scrollToIndex(currentIndex, false);
+        }
+    }
+
+    function nextSlide() {
+        scrollToIndex(currentIndex + 1);
+        setTimeout(handleInfiniteLoop, 750);
+    }
+
+    function prevSlide() {
+        scrollToIndex(currentIndex - 1);
+        setTimeout(handleInfiniteLoop, 750);
+    }
+
+    // Button controls
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoScroll();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoScroll();
+    });
+
+    // Indicator controls
+    indicators.forEach((indicator, index) => {
+        indicator.addEventListener('click', () => {
+            scrollToIndex(originalItems.length + index);
+            resetAutoScroll();
+        });
+    });
+
+    // Auto-scroll functionality
+    function startAutoScroll() {
+        autoScrollInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoScroll() {
+        clearInterval(autoScrollInterval);
+        startAutoScroll();
+    }
+
+    // Initialize
+    setupInfiniteLoop();
+    startAutoScroll();
+
+    // Pause on hover
+    carousel.parentElement.addEventListener('mouseenter', () => {
+        clearInterval(autoScrollInterval);
+    });
+
+    carousel.parentElement.addEventListener('mouseleave', () => {
+        startAutoScroll();
+    });
+});
+</script>
 
 <!-- What You Get Section -->
 <div class="max-w-7xl mx-auto mb-24 px-4">
