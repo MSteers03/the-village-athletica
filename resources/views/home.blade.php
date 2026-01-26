@@ -4,10 +4,12 @@
 
 @section('content')
 <!-- Hero Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-32 mb-16">
-    <div class="max-w-6xl mx-auto px-8 text-center">
-        <h1 class="text-7xl font-bold mb-6 leading-tight">STOP EXERCISING<br>START TRAINING!</h1>
-        <p class="text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-32 mb-8 md:mb-16">
+    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+            STOP EXERCISING<br>START TRAINING!
+        </h1>
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
             It's not motivation, it's dedication.
         </p>
     </div>

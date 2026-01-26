@@ -6,21 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'The Village Athletica')</title>
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="font-sans bg-village-grey">
-    <!-- Header -->
-    <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold">The Village Athletica</div>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="/" class="hover:text-red-700 transition font-bold">Home</a></li>
-                    <li><a href="/timetable" class="hover:text-red-700 transition font-bold">Timetable</a></li>
-                    <li><a href="/pricing" class="hover:text-red-700 transition font-bold">Pricing</a></li>
-                    <li><a href="/contact" class="hover:text-red-700 transition font-bold">Contact</a></li>
+    <!-- Header with Mobile Menu -->
+    <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="text-xl md:text-2xl font-bold">
+                    The Village<br class="md:hidden"> Athletica
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="/" class="hover:text-red-700 transition font-bold">Home</a></li>
+                        <li><a href="/timetable" class="hover:text-red-700 transition font-bold">Timetable</a></li>
+                        <li><a href="/pricing" class="hover:text-red-700 transition font-bold">Pricing</a></li>
+                        <li><a href="/contact" class="hover:text-red-700 transition font-bold">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2">
+                    <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav x-show="mobileMenuOpen" 
+                 x-transition
+                 class="md:hidden mt-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="/" class="block py-2 hover:text-red-700 transition font-bold">Home</a></li>
+                    <li><a href="/timetable" class="block py-2 hover:text-red-700 transition font-bold">Timetable</a></li>
+                    <li><a href="/pricing" class="block py-2 hover:text-red-700 transition font-bold">Pricing</a></li>
+                    <li><a href="/contact" class="block py-2 hover:text-red-700 transition font-bold">Contact</a></li>
                 </ul>
             </nav>
         </div>
@@ -37,11 +65,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">The Village Athletica</h3>
-                    <p>Your local fitness community dedicated to helping you achieve your goals.</p>
+                    <p class="text-sm">Your local fitness community dedicated to helping you achieve your goals.</p>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
+                    <ul class="space-y-2 text-sm">
                         <li><a href="/" class="hover:text-red-200 transition">Home</a></li>
                         <li><a href="/timetable" class="hover:text-red-200 transition">Timetable</a></li>
                         <li><a href="/pricing" class="hover:text-red-200 transition">Pricing</a></li>
@@ -50,14 +78,14 @@
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact Info</h3>
-                    <p>84 Railway Parade</p>
-                    <p>Midland, WA, 6056</p>
-                    <p><a href="tel:0449523937">Phone: 0449 523 937</a></p>
-                    <p><a href="mailto:info@thevillageathletica.com.au"> Email: info@thevillageathletica.com.au</a></p>
+                    <p class="text-sm">84 Railway Parade</p>
+                    <p class="text-sm">Midland, WA, 6056</p>
+                    <p class="text-sm"><a href="tel:0449523937" class="hover:text-red-200">0449 523 937</a></p>
+                    <p class="text-sm break-all"><a href="mailto:info@thevillageathletica.com.au" class="hover:text-red-200">info@thevillageathletica.com.au</a></p>
                 </div>
             </div>
             <div class="border-t border-red-800 mt-8 pt-6 text-center">
-                <p>&copy; {{ date('Y') }} The Village Athletica. All rights reserved.</p>
+                <p class="text-sm">&copy; {{ date('Y') }} The Village Athletica. All rights reserved.</p>
             </div>
         </div>
     </footer>
