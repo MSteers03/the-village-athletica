@@ -7,7 +7,10 @@
 <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen overflow-hidden text-white py-16 md:py-32 mb-8 md:mb-16">
     <!-- Background Video -->
     <div class="absolute inset-0 w-full h-full">
-        <x-cloudinary::video public-id="Monday_Madness" />
+        <x-cloudinary-video 
+            public-id="Monday_Madness" 
+            class="w-full h-full object-cover"
+        />
     </div>
         
     <!-- Dark Overlay for readability -->
