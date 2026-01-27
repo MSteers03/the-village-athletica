@@ -4,12 +4,24 @@
 
 @section('content')
 <!-- Hero Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white py-16 md:py-32 mb-8 md:mb-16">
-    <div class="max-w-6xl mx-auto px-4 md:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight">
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen overflow-hidden text-white py-16 md:py-32 mb-8 md:mb-16">
+    <!-- Background Video -->
+    <div class="absolute inset-0 w-full h-full">
+        <x-cloudinary::video public-id="Monday_Madness" />
+    </div>
+        
+    <!-- Dark Overlay for readability -->
+    <div class="absolute inset-0 bg-black/60 z-[1]"></div>
+    
+    <!-- Optional: Gradient overlay for extra style -->
+    <div class="absolute inset-0 bg-gradient-to-br from-village-brown/40 to-transparent z-[2]"></div>
+    
+    <!-- Content (positioned above video) -->
+    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-8 text-center">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight drop-shadow-2xl">
             STOP EXERCISING<br>START TRAINING!
         </h1>
-        <p class="text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+        <p class="text-lg md:text-xl lg:text-2xl text-gray-100 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
             It's not motivation, it's dedication.
         </p>
     </div>

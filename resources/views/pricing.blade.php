@@ -92,7 +92,7 @@
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-gray-100 flex flex-col">
             <div class="bg-gradient-to-br from-village-grey to-gray-200 text-gray-800 py-8 px-6 text-center">
                 <h3 class="text-2xl font-bold mb-2">Level 1</h3>
-                <div class="text-6xl font-bold text-gray-900 mt-6">$49</div>
+                <div class="text-6xl font-bold text-gray-900 mt-6">$53</div>
                 <p class="text-gray-600 mt-2 text-lg">per week</p>
             </div>
             <div class="p-8 flex-grow flex flex-col">
@@ -131,10 +131,9 @@
 
         <!-- Level 2 - Most Popular -->
         <div class="bg-white rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 hover:scale-105 border-4 border-village-brown relative flex flex-col focus:outline-none">
-            <div class="bg-gradient-to-br from-village-brown to-red-900 text-white py-6 px-6 text-center">
-                <h3 class="text-2xl font-bold mb-0.5">Level 2</h3>
-                <p class="text-village-grey text-sm font-semibold mb-2">Best Seller</p>
-                <div class="text-6xl font-bold mt-3">$59</div>
+            <div class="bg-gradient-to-br from-village-brown to-red-900 text-white py-8 px-6 text-center">
+                <h3 class="text-2xl font-bold mb-2">Level 2</h3>
+                <div class="text-6xl font-bold mt-6">$63</div>
                 <p class="text-red-100 mt-2 text-lg">per week</p>
             </div>
             <div class="p-8 flex-grow flex flex-col">
@@ -179,9 +178,10 @@
 
         <!-- Level 3 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-gray-100 flex flex-col">
-            <div class="bg-gradient-to-br from-village-grey to-gray-200 text-gray-800 py-8 px-6 text-center">
-                <h3 class="text-2xl font-bold mb-2">Level 3</h3>
-                <div class="text-6xl font-bold text-gray-900 mt-6">$69</div>
+            <div class="bg-gradient-to-br from-village-grey to-gray-200 text-gray-900 py-6 px-6 text-center">
+                <h3 class="text-2xl font-bold mb-0.5">Level 2</h3>
+                <p class="text-gray-900 text-sm font-semibold mb-2">Best Seller</p>
+                <div class="text-6xl font-bold mt-3">$73</div>
                 <p class="text-gray-600 mt-2 text-lg">per week</p>
             </div>
             <div class="p-8 flex-grow flex flex-col">
