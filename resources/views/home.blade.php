@@ -14,7 +14,7 @@
         preload="metadata"
         class="absolute inset-0 w-full h-full object-cover object-center"
     >
-        <source src="{{ config('filesystems.disks.r2.url') }}/Monday_Madness.mov" type="video/mp4">
+        <source src="{{ config('filesystems.disks.r2.url') }}/Monday_Madness_Compressed.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     
