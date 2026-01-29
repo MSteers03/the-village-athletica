@@ -6,13 +6,18 @@
 <!-- Hero Section -->
 <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen overflow-hidden text-white py-16 md:py-32 mb-8 md:mb-16">
     <!-- Background Video -->
-    <div class="absolute inset-0 w-full h-full">
-        <x-cloudinary-video 
-            public-id="Monday_Madness" 
-            class="w-full h-full object-cover"
-        />
-    </div>
-        
+    <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        preload="metadata"
+        class="absolute inset-0 w-full h-full object-cover object-center"
+    >
+        <source src="{{ config('filesystems.disks.r2.url') }}/Monday_Madness.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
     <!-- Dark Overlay for readability -->
     <div class="absolute inset-0 bg-black/60 z-[1]"></div>
     
