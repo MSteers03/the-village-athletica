@@ -70,6 +70,18 @@ return [
             'prefix' => env('CLOUDINARY_PREFIX'),
         ],
 
+        'r2' => [
+            'driver' => 's3',
+            'key' => env('R2_ACCESS_KEY_ID'),
+            'region' => 'auto',
+            'bucket' => env('R2_BUCKET'),
+            'endpoint' => env('R2_ENDPOINT'),
+            'url' => env('R2_URL'),
+            'use_path_style_endpoint' => false,
+            'throw' => false,
+            'secret' => env('R2_SECRET_ACCESS_KEY'),
+        ],
+
     ],
 
     /*
