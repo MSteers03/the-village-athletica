@@ -179,7 +179,7 @@
         <!-- Level 3 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-gray-100 flex flex-col">
             <div class="bg-gradient-to-br from-village-grey to-gray-200 text-gray-900 py-6 px-6 text-center">
-                <h3 class="text-2xl font-bold mb-0.5">Level 2</h3>
+                <h3 class="text-2xl font-bold mb-0.5">Level 3</h3>
                 <p class="text-gray-900 text-sm font-semibold mb-2">Best Seller</p>
                 <div class="text-6xl font-bold mt-3">$73</div>
                 <p class="text-gray-600 mt-2 text-lg">per week</p>
