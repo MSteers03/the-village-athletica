@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'The Village Athletica')</title>
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
+    <meta name="google-site-verification" content="VYg7uGfxroJc3ALMhSe3_OcnGkH9TlOvFvbYTrVzoaw" />
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
