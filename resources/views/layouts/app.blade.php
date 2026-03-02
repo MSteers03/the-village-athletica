@@ -15,6 +15,15 @@
     
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0ZF6X4CSB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q0ZF6X4CSB');
+</script>
 <body class="font-sans bg-village-grey">
     <!-- Header with Mobile Menu -->
     <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
