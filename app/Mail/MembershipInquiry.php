@@ -20,6 +20,7 @@ class MembershipInquiry extends Mailable
     public function build()
     {
         return $this->subject('New Membership Inquiry - ' . $this->formData['name'])
-                    ->view('emails.membership-inquiry');
+                    ->view('emails.membership-inquiry')
+                    ->text('emails.membership-inquiry');
     }
 }

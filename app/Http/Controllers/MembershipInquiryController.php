@@ -20,8 +20,8 @@ class MembershipInquiryController extends Controller
         
         try {
             // Send email using Resend
-            Mail::to('info@thevillageathletica.com.au')
-                ->cc('mitchellsteers@gmail.com')
+            Mail::to('test-21zv3lunr@srv1.mail-tester.com')
+                // ->cc('mitchellsteers@gmail.com')
                 ->send(new MembershipInquiry($request->all()));
             
             return response()->json([

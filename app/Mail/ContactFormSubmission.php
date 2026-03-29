@@ -20,6 +20,7 @@ class ContactFormSubmission extends Mailable
     public function build()
     {
         return $this->subject('New Contact Form Submission - The Village Athletica')
-                    ->view('emails.contact-form');
+                    ->view('emails.contact-form')
+                    ->text('emails.contact-form');
     }
 }
