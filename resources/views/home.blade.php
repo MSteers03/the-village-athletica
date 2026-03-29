@@ -4,70 +4,51 @@
 
 @section('content')
 <!-- Hero Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen overflow-hidden text-white py-16 md:py-32 mb-8 md:mb-16">
-    <!-- Background Video -->
-    <video 
-        autoplay 
-        muted 
-        loop 
+{{-- VIDEO: aspect-video on mobile = no cropping, vh heights on larger screens --}}
+<div class="relative w-full overflow-hidden aspect-video sm:aspect-auto sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-2xl mx-auto max-w-[98vw] shadow-2xl">    <video
+        autoplay
+        muted
+        loop
         playsinline
-        preload="metadata"
         class="absolute inset-0 w-full h-full object-cover object-center"
     >
-        <source src="{{ config('filesystems.disks.r2.url') }}/Monday_Madness_Compressed.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <source src="{{ config('filesystems.disks.r2.url') }}/welcome_to_the_village.mp4" type="video/mp4">
     </video>
-    
-    <!-- Dark Overlay for readability -->
-    <div class="absolute inset-0 bg-black/60 z-[1]"></div>
-    
-    <!-- Optional: Gradient overlay for extra style -->
-    <div class="absolute inset-0 bg-gradient-to-br from-village-brown/40 to-transparent z-[2]"></div>
-    
-    <!-- Content (positioned above video) -->
-    <div class="relative z-10 max-w-6xl mx-auto px-4 md:px-8 text-center">
-        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight drop-shadow-2xl">
-            STOP EXERCISING<br>START TRAINING!
-        </h1>
-        <p class="text-lg md:text-xl lg:text-2xl text-gray-100 leading-relaxed max-w-3xl mx-auto drop-shadow-lg">
-            It's not motivation, it's dedication.
-        </p>
-    </div>
 </div>
 
 <!-- About Section -->
-<div class="max-w-7xl mx-auto mb-24 px-4">
+<div class="max-w-7xl mx-auto py-16 px-4 mb-24">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Column - Text -->
         <div class="text-center lg:text-left">
             <h2 class="text-5xl font-bold text-gray-900 mb-6">Want To Get Fit?</h2>
             <h3 class="text-3xl font-bold text-village-brown mb-8">Join The Fittest Gym In Midland</h3>
-            
+
             <p class="text-lg text-gray-700 leading-relaxed mb-6">
                 The Village is an inclusive fitness community where your age, or fitness level does not define you. With commitment and diligence anyone can benefit from Functional Fitness and achieve their fitness goals.
             </p>
-            
+
             <p class="text-lg text-gray-700 leading-relaxed mb-8">
                 We coach our athletes to push past their often self-imposed physical and mental confines. Together, we learn the techniques, put in the hard work and build belief to overcome the obstacles. We want you to be the best version of yourself.
             </p>
-            
+
             <p class="text-lg text-gray-700 leading-relaxed mb-8">
                 Take that step today.
             </p>
-            
+
             <a href="/contact" class="inline-block bg-black text-white px-10 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
                 CLICK HERE!
             </a>
         </div>
-        
-        <!-- Right Column - Video/Image Placeholder -->
+
+        <!-- Right Column -->
         <div class="text-center lg:text-left">
             <h2 class="text-5xl font-bold text-gray-900 mb-8">MEMBERSHIPS</h2>
-            
+
             <p class="text-lg text-gray-700 leading-relaxed mb-8">
                 Your membership will be determined by how many sessions per week you'd like to attend. Each session is lead by one of our coaches to help you improve each time you attend a class.
             </p>
-            
+
             <a href="/pricing" class="inline-flex items-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
                 <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
