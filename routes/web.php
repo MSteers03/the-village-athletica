@@ -14,6 +14,11 @@ Route::post('/membership-inquiry', [App\Http\Controllers\MembershipInquiryContro
 Route::get('/contact', [ContactFormController::class, 'show'])->name('contact');
 Route::post('/contact-submit', [ContactFormController::class, 'submit'])->name('contact.submit');
 
+Route::get('/sitemap.xml', function () {
+    $content = file_get_contents(public_path('sitemap.xml'));
+    return response($content, 200)->header('Content-Type', 'application/xml');
+});
+
 // Apply maintenance mode middleware to all other routes
 Route::middleware([CheckMaintenance::class])->group(function () {
     Route::get('/', function () {
