@@ -1,11 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script
-        data-recording-token="BNmLcHLIhRTXnpuPMshfBiyagwTxzKt602URCwnL"
-        data-is-production-environment="<true/false>"
-        src="https://snippet.meticulous.ai/v1/meticulous.js">
-    </script>
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
