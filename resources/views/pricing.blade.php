@@ -278,8 +278,8 @@
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
                 <div class="bg-gradient-to-br from-village-brown to-red-800 text-white py-6 px-6 text-center">
                     <h3 class="text-2xl font-bold mb-2">10-Pack</h3>
-                    <div class="text-5xl font-bold mt-4">$250</div>
-                    <p class="text-red-100 mt-2">Save $50</p>
+                    <div class="text-5xl font-bold mt-4">$300</div>
+                    <p class="text-red-100 mt-2 invisible">Save $50</p>
                 </div>
                 <div class="p-8 flex-grow flex flex-col">
                     <div class="space-y-4 mb-8 text-gray-700 text-center leading-relaxed flex-grow">
