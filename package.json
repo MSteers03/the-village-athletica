@@ -13,7 +13,7 @@
         "autoprefixer": "^10.4.27",
         "axios": "^1.15.2",
         "baseline-browser-mapping": "^2.10.17",
-        "concurrently": "^9.0.1",
+        "concurrently": "^10.0.5",
         "cross-env": "^10.1.0",
         "laravel-vite-plugin": "^3.0.1",
         "postcss": "^8.5.10",
