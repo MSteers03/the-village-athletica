@@ -16,7 +16,7 @@
         "concurrently": "^10.0.5",
         "cross-env": "^10.1.0",
         "laravel-vite-plugin": "^3.0.1",
-        "postcss": "^8.5.10",
+        "postcss": "^8.5.28",
         "tailwindcss": "^4.2.2",
         "vite": "^8.0.8",
         "vitest": "^4.1.3"
