@@ -49,7 +49,9 @@ return [
             'Hazelmere', 'South Guildford', 'Middle Swan', 'Perth',
         ],
         // Public profile URLs (Instagram, Facebook, ...) for structured data.
-        'same_as' => [],
+        'same_as' => [
+            'https://www.instagram.com/thevillageathletica',
+        ],
     ],
 
 ];
