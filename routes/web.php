@@ -11,7 +11,6 @@ Route::post('/maintenance/contact', [App\Http\Controllers\MaintenanceController:
 
 Route::post('/membership-inquiry', [App\Http\Controllers\MembershipInquiryController::class, 'submit'])->name('membership.inquiry');
 
-Route::get('/contact', [ContactFormController::class, 'show'])->name('contact');
 Route::post('/contact-submit', [ContactFormController::class, 'submit'])->name('contact.submit');
 
 Route::get('/sitemap.xml', function () {
@@ -33,9 +32,7 @@ Route::middleware([CheckMaintenance::class])->group(function () {
         return view('timetable');
     })->name('timetable');
 
-    Route::get('/contact', function () {
-        return view('contact');
-    })->name('contact');
+    Route::get('/contact', [ContactFormController::class, 'show'])->name('contact');
 
     Route::get('/test', function () {
     return view('test');

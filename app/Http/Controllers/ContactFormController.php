@@ -40,7 +40,7 @@ class ContactFormController extends Controller
         $recaptchaData = $recaptchaResponse->json();
         
         // Check if reCAPTCHA verification failed
-        if (!$recaptchaData['success'] || $recaptchaData['score'] < 0.5) {
+        if (!($recaptchaData['success'] ?? false) || ($recaptchaData['score'] ?? 0) < 0.5) {
             Log::warning('reCAPTCHA verification failed', [
                 'score' => $recaptchaData['score'] ?? 'N/A',
                 'errors' => $recaptchaData['error-codes'] ?? []
