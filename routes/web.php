@@ -33,8 +33,4 @@ Route::middleware([CheckMaintenance::class])->group(function () {
     })->name('timetable');
 
     Route::get('/contact', [ContactFormController::class, 'show'])->name('contact');
-
-    Route::get('/test', function () {
-    return view('test');
-    })->name('test');
 });
