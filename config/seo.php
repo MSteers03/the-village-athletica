@@ -21,8 +21,14 @@ return [
 
     'default_description' => 'The Village Athletica is a functional fitness gym in Midland, WA, offering coached classes, HIRT and personal training. No lock-in contracts or joining fee.',
 
-    // Cloudinary public ID of the image shown when a page is shared on social media.
-    'share_image' => 'jess',
+    // Images in public/: the wordmark is shown when a page is shared on social
+    // media, the square pillars mark is the logo Google shows for the business.
+    'share_image' => [
+        'path' => 'images/the-village-logo.png',
+        'width' => 2000,
+        'height' => 1201,
+    ],
+    'logo' => 'images/the-village-pillars-logo.png',
 
     'business' => [
         'name' => 'The Village Athletica',
@@ -37,6 +43,11 @@ return [
         'longitude' => 116.002956,
         'map_url' => 'https://maps.app.goo.gl/N52BHhFjw1nVDZjv6',
         'price_range' => '$$',
+        'area_served' => [
+            'Midland', 'Swan View', 'Guildford', 'Bellevue', 'Midvale', 'Woodbridge',
+            'Viveash', 'Stratton', 'Jane Brook', 'Koongamia', 'Greenmount', 'Helena Valley',
+            'Hazelmere', 'South Guildford', 'Middle Swan', 'Perth',
+        ],
         // Public profile URLs (Instagram, Facebook, ...) for structured data.
         'same_as' => [],
     ],
