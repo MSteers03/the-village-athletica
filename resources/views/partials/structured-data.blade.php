@@ -10,6 +10,7 @@
             'url' => $siteUrl . '/',
             'description' => config('seo.default_description'),
             'image' => $seoImage,
+            'logo' => $siteUrl . '/' . config('seo.logo'),
             'telephone' => $business['telephone'],
             'email' => $business['email'],
             'priceRange' => $business['price_range'],
@@ -27,7 +28,10 @@
                 'longitude' => $business['longitude'],
             ],
             'hasMap' => $business['map_url'],
-            'areaServed' => ['Midland', 'Perth'],
+            'areaServed' => array_map(
+                fn ($suburb) => ['@type' => 'Place', 'name' => $suburb . ', WA'],
+                $business['area_served']
+            ),
             'sameAs' => $business['same_as'],
         ],
         [

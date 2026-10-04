@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'The Village Athletica | Functional Fitness Gym in Midland, WA')
-@section('meta_description', 'Join the fittest gym in Midland, WA. Coached functional fitness and HIRT classes for every age and fitness level. No lock-in contracts, no joining fee.')
+@section('meta_description', 'Join the fittest gym in Midland, near Swan View, Guildford and Bellevue. Coached functional fitness and HIRT classes for all levels. No lock-in contracts.')
 
 @section('content')
 <!-- Hero Section -->

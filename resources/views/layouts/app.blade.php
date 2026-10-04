@@ -7,11 +7,14 @@
         $seoTitle = html_entity_decode(trim($__env->yieldContent('title', config('seo.site_name'))), ENT_QUOTES);
         $seoDescription = html_entity_decode(trim($__env->yieldContent('meta_description', config('seo.default_description'))), ENT_QUOTES);
         $seoCanonical = config('seo.url') . (request()->path() === '/' ? '/' : '/' . request()->path());
-        $seoImage = cloudinary()->image(config('seo.share_image'))->addTransformation('c_fill,g_auto,w_1200,h_630,f_jpg,q_auto')->toUrl();
+        $seoImage = config('seo.url') . '/' . config('seo.share_image.path');
+        // Keep test/preview hostnames (e.g. village.steersfam.com) out of search results.
+        // The www. variant counts as the live site in case Vercel serves both.
+        $seoIsCanonicalHost = preg_replace('/^www\./', '', request()->getHost()) === preg_replace('/^www\./', '', parse_url(config('seo.url'), PHP_URL_HOST));
     @endphp
     <title>{{ $seoTitle }}</title>
     <meta name="description" content="{{ $seoDescription }}">
-    <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large')">
+    <meta name="robots" content="{{ $seoIsCanonicalHost ? trim($__env->yieldContent('robots', 'index, follow, max-image-preview:large')) : 'noindex, nofollow' }}">
     <link rel="canonical" href="{{ $seoCanonical }}">
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
     <meta name="google-site-verification" content="VYg7uGfxroJc3ALMhSe3_OcnGkH9TlOvFvbYTrVzoaw" />
@@ -24,9 +27,9 @@
     <meta property="og:description" content="{{ $seoDescription }}">
     <meta property="og:url" content="{{ $seoCanonical }}">
     <meta property="og:image" content="{{ $seoImage }}">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Training at {{ config('seo.site_name') }} in Midland, WA">
+    <meta property="og:image:width" content="{{ config('seo.share_image.width') }}">
+    <meta property="og:image:height" content="{{ config('seo.share_image.height') }}">
+    <meta property="og:image:alt" content="{{ config('seo.site_name') }} logo">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ $seoTitle }}">
     <meta name="twitter:description" content="{{ $seoDescription }}">
