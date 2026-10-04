@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'The Village Athletica')
+@section('title', 'The Village Athletica | Functional Fitness Gym in Midland, WA')
+@section('meta_description', 'Join the fittest gym in Midland, WA. Coached functional fitness and HIRT classes for every age and fitness level. No lock-in contracts, no joining fee.')
 
 @section('content')
 <!-- Hero Section -->
@@ -10,6 +11,7 @@
         muted
         loop
         playsinline
+        aria-label="Welcome to The Village Athletica, a functional fitness gym in Midland, WA"
         class="absolute inset-0 w-full h-full object-cover object-center"
     >
         <source src="{{ config('filesystems.disks.r2.url') }}/welcome_to_the_village.mp4" type="video/mp4">
@@ -21,7 +23,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Column - Text -->
         <div class="text-center lg:text-left">
-            <h2 class="text-5xl font-bold text-gray-900 mb-6">Want To Get Fit?</h2>
+            <h1 class="text-5xl font-bold text-gray-900 mb-6">Want To Get Fit?</h1>
             <h3 class="text-3xl font-bold text-village-brown mb-8">Join The Fittest Gym In Midland</h3>
 
             <p class="text-lg text-gray-700 leading-relaxed mb-6">
@@ -73,7 +75,11 @@
         @foreach($athletes as $athlete)
         <div class="flex-shrink-0 w-64 md:w-80">
             <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <x-cloudinary::image public-id="{{ $athlete }}" class="w-full h-full object-cover" alt="Athlete {{ $loop->iteration }}"/>
+                <img src="{{ cloudinary()->image($athlete)->addTransformation('c_limit,h_1000,f_auto,q_auto')->toUrl() }}"
+                     class="w-full h-full object-cover"
+                     alt="{{ ucwords(str_replace('-', ' ', $athlete)) }} training at The Village Athletica gym in Midland"
+                     loading="{{ $loop->index < 4 ? 'eager' : 'lazy' }}"
+                     decoding="async">
             </div>
         </div>
         @endforeach

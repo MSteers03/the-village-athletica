@@ -1,24 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'The Village Athletica')</title>
+    @php
+        $seoTitle = html_entity_decode(trim($__env->yieldContent('title', config('seo.site_name'))), ENT_QUOTES);
+        $seoDescription = html_entity_decode(trim($__env->yieldContent('meta_description', config('seo.default_description'))), ENT_QUOTES);
+        $seoCanonical = config('seo.url') . (request()->path() === '/' ? '/' : '/' . request()->path());
+        $seoImage = cloudinary()->image(config('seo.share_image'))->addTransformation('c_fill,g_auto,w_1200,h_630,f_jpg,q_auto')->toUrl();
+    @endphp
+    <title>{{ $seoTitle }}</title>
+    <meta name="description" content="{{ $seoDescription }}">
+    <meta name="robots" content="@yield('robots', 'index, follow, max-image-preview:large')">
+    <link rel="canonical" href="{{ $seoCanonical }}">
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
     <meta name="google-site-verification" content="VYg7uGfxroJc3ALMhSe3_OcnGkH9TlOvFvbYTrVzoaw" />
-    
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0ZF6X4CSB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-Q0ZF6X4CSB');
-</script>
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config('seo.site_name') }}">
+    <meta property="og:locale" content="{{ config('seo.locale') }}">
+    <meta property="og:title" content="{{ $seoTitle }}">
+    <meta property="og:description" content="{{ $seoDescription }}">
+    <meta property="og:url" content="{{ $seoCanonical }}">
+    <meta property="og:image" content="{{ $seoImage }}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Training at {{ config('seo.site_name') }} in Midland, WA">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $seoTitle }}">
+    <meta name="twitter:description" content="{{ $seoDescription }}">
+    <meta name="twitter:image" content="{{ $seoImage }}">
+
+    <link rel="preconnect" href="https://res.cloudinary.com">
+
+    @include('partials.structured-data', ['breadcrumb' => trim($__env->yieldContent('breadcrumb')) ?: null])
+    @stack('structured-data')
+
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q0ZF6X4CSB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Q0ZF6X4CSB');
+    </script>
+</head>
 <body class="font-sans bg-village-grey">
     <!-- Header with Mobile Menu -->
     <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">

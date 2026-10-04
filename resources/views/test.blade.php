@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'TEST - The Village Athletica')
+@section('robots', 'noindex, nofollow')
 
 @section('content')
 <!-- Hero Section -->
