@@ -15,9 +15,11 @@ class CheckMaintenance
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // Check if maintenance mode is enabled
+        // Check if maintenance mode is enabled. Serve the maintenance page with a
+        // 503 so search engines treat the outage as temporary and keep the
+        // original pages indexed, rather than following a redirect.
         if (env('MAINTENANCE_MODE', false)) {
-            return redirect()->route('maintenance');
+            return response()->view('maintenance', [], 503)->header('Retry-After', '3600');
         }
 
         return $next($request);

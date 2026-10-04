@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Contact - The Village Athletica')
+@section('title', 'Contact Us | The Village Athletica, 84 Railway Parade Midland')
+@section('meta_description', 'Contact The Village Athletica at 84 Railway Parade, Midland WA 6056. Call 0449 523 937 or send us a message to start training with us.')
+@section('breadcrumb', 'Contact')
 
 @push('scripts')
 <script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>

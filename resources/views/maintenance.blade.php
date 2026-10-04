@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Site Under Maintenance - The Village Athletica</title>
+    <meta name="robots" content="noindex">
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>

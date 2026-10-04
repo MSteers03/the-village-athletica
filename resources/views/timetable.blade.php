@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Timetable - The Village Athletica')
+@section('title', 'Class Timetable | Gym Classes in Midland | The Village Athletica')
+@section('meta_description', 'Weekly class timetable at The Village Athletica, Midland WA. Coached functional fitness and 30-minute HIRT classes from 5:30am, Monday to Saturday.')
+@section('breadcrumb', 'Timetable')
 
 @section('content')
 <!-- Hero Section -->

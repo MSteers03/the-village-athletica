@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', 'Pricing - The Village Athletica')
+@section('title', 'Gym Membership Pricing Midland | The Village Athletica')
+@section('meta_description', 'Flexible gym memberships in Midland with coached classes, open gym access, no lock-in contracts and no joining fee. HIRT, PT and class packs available.')
+@section('breadcrumb', 'Pricing')
 
 @section('content')
 <!-- Hero Section -->
