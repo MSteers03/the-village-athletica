@@ -30,10 +30,12 @@
         no_promotions: false
     },
     isSubmitting: false,
+    errors: {},
     submitStatus: { show: false, type: '', message: '' },
     async submitForm() {
         this.isSubmitting = true;
         this.submitStatus.show = false;
+        this.errors = {};
 
         try {
             // Generate reCAPTCHA token (the script loads async, so wait until it is ready)
@@ -83,11 +85,17 @@
                     formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             } else {
+                this.errors = data.errors || {};
                 this.submitStatus = {
                     show: true,
                     type: 'error',
                     message: data.message
                 };
+                // Take keyboard and screen reader users to the first field that needs fixing
+                const firstInvalid = Object.keys(this.errors)[0];
+                if (firstInvalid && document.getElementById(firstInvalid)) {
+                    this.$nextTick(() => document.getElementById(firstInvalid).focus());
+                }
             }
         } catch (error) {
             this.submitStatus = {
@@ -105,9 +113,12 @@
 <div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen mb-16">
     <div class="relative h-96 bg-gray-200">
         <!-- Google Maps Embed -->
+        {{-- The map loads once the rest of the page has finished, so it doesn't slow down the form --}}
         <iframe 
             title="Map showing The Village Athletica at 84 Railway Parade, Midland"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.8513374492286!2d116.00295557808226!3d-31.891691725618404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b9bb61410b09%3A0xd69114e128638e60!2sThe%20Village%20Athletica!5e1!3m2!1sen!2sau!4v1768026809414!5m2!1sen!2sau"
+            x-data
+            x-init="const load = () => $el.src = $el.dataset.src; document.readyState === 'complete' ? load() : window.addEventListener('load', load, { once: true })"
+            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.8513374492286!2d116.00295557808226!3d-31.891691725618404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b9bb61410b09%3A0xd69114e128638e60!2sThe%20Village%20Athletica!5e1!3m2!1sen!2sau!4v1768026809414!5m2!1sen!2sau"
             class="absolute inset-0 w-full h-full"
             style="border:0;" 
             allowfullscreen="" 
@@ -158,10 +169,13 @@
                             name="first_name"
                             autocomplete="given-name"
                             x-model="formData.first_name"
+                            :aria-invalid="errors.first_name ? 'true' : null"
+                            aria-describedby="first_name-error"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="First Name"
                         >
+                        <p id="first_name-error" class="mt-2 text-sm text-red-700" x-cloak x-show="errors.first_name" x-text="errors.first_name ? errors.first_name[0] : ''"></p>
                     </div>
 
                     <!-- Last Name -->
@@ -175,10 +189,13 @@
                             name="last_name"
                             autocomplete="family-name"
                             x-model="formData.last_name"
+                            :aria-invalid="errors.last_name ? 'true' : null"
+                            aria-describedby="last_name-error"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="Last Name"
                         >
+                        <p id="last_name-error" class="mt-2 text-sm text-red-700" x-cloak x-show="errors.last_name" x-text="errors.last_name ? errors.last_name[0] : ''"></p>
                     </div>
 
                     <!-- Email -->
@@ -192,10 +209,13 @@
                             name="email"
                             autocomplete="email"
                             x-model="formData.email"
+                            :aria-invalid="errors.email ? 'true' : null"
+                            aria-describedby="email-error"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="Email"
                         >
+                        <p id="email-error" class="mt-2 text-sm text-red-700" x-cloak x-show="errors.email" x-text="errors.email ? errors.email[0] : ''"></p>
                     </div>
 
                     <!-- Phone -->
@@ -209,10 +229,13 @@
                             name="phone"
                             autocomplete="tel"
                             x-model="formData.phone"
+                            :aria-invalid="errors.phone ? 'true' : null"
+                            aria-describedby="phone-error"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
                             placeholder="Phone"
                         >
+                        <p id="phone-error" class="mt-2 text-sm text-red-700" x-cloak x-show="errors.phone" x-text="errors.phone ? errors.phone[0] : ''"></p>
                     </div>
 
                     <!-- Interest Dropdown -->
@@ -285,10 +308,13 @@
                             id="comments" 
                             name="comments"
                             x-model="formData.comments"
+                            :aria-invalid="errors.comments ? 'true' : null"
+                            aria-describedby="comments-error"
                             rows="6"
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition resize-none"
                             placeholder="Your comments and questions"
                         ></textarea>
+                        <p id="comments-error" class="mt-2 text-sm text-red-700" x-cloak x-show="errors.comments" x-text="errors.comments ? errors.comments[0] : ''"></p>
                     </div>
 
                     <!-- Opt-out Checkbox -->
@@ -377,8 +403,8 @@
                             </svg>
                         </div>
                         <div>
-                            <a href="mailto:info@thevillageathetica.com.au" class="text-gray-700 hover:text-village-brown transition break-all">
-                                info@thevillageathetica.com.au
+                            <a href="mailto:info@thevillageathletica.com.au" class="text-gray-700 hover:text-village-brown transition break-all">
+                                info@thevillageathletica.com.au
                             </a>
                         </div>
                     </div>
@@ -409,9 +435,4 @@
 </div>
 </div>
 
-<style>
-    [x-cloak] {
-        display: none !important;
-    }
-</style>
 @endsection

@@ -10,3 +10,19 @@
 [x-cloak] {
     display: none !important;
 }
+
+/* Visible keyboard focus everywhere (only shows for keyboard users, not mouse clicks).
+   In a layer so components with their own focus ring keep it. */
+@layer base {
+    a:focus-visible,
+    button:focus-visible,
+    summary:focus-visible,
+    [tabindex]:focus-visible {
+        outline: 3px solid var(--color-village-brown);
+        outline-offset: 2px;
+    }
+
+    footer a:focus-visible {
+        outline-color: #fff;
+    }
+}

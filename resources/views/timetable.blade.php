@@ -65,7 +65,7 @@
                     <div class="bg-gradient-to-br from-village-grey to-gray-200 text-village-brown font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow">HIRT</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
             </tr>
 
@@ -73,22 +73,22 @@
             <tr class="border-b-2 border-village-grey">
                 <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">6:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
             </tr>
 
@@ -96,22 +96,22 @@
             <tr class="border-b-2 border-village-grey">
                 <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">7:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">BARBELL CLUB / GYMNASTICS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">BARBELL CLUB / GYMNASTICS</div>
                 </td>
             </tr>
 
@@ -119,22 +119,22 @@
             <tr class="border-b-2 border-village-grey">
                 <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">8:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
             </tr>
 
@@ -148,16 +148,16 @@
                     <div class="bg-gradient-to-br from-village-grey to-gray-200 text-village-brown font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow">HIRT</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-grey to-gray-200 text-village-brown font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow">HIRT</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
             </tr>
 
@@ -165,22 +165,22 @@
             <tr class="border-b-2 border-village-grey">
                 <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">9:30 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
             </tr>
 
@@ -188,22 +188,22 @@
             <tr class="border-b-2 border-village-grey">
                 <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">4:30 PM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
             </tr>
 
@@ -211,22 +211,22 @@
             <tr>
                 <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">5:30 PM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
-                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-[10px] md:text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
+                    <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white">
-                    <span class="text-gray-400 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
+                    <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
             </tr>
         </tbody>

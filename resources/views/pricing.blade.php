@@ -18,10 +18,12 @@
     selectedLevel: '',
     formData: { name: '', email: '', phone: '' },
     isSubmitting: false,
+    errors: {},
     submitStatus: { show: false, type: '', message: '' },
     async submitForm() {
         this.isSubmitting = true;
         this.submitStatus.show = false;
+        this.errors = {};
         
         try {
             const response = await fetch('{{ route('membership.inquiry') }}', {
@@ -57,6 +59,7 @@
                     this.submitStatus.show = false;
                 }, 2000);
             } else {
+                this.errors = data.errors || {};
                 this.submitStatus = {
                     show: true,
                     type: 'error',
@@ -485,7 +488,7 @@
          class="fixed inset-0 z-50 overflow-y-auto">
         
         <!-- Semi-transparent background overlay - click to close -->
-        <div class="fixed inset-0 bg-black bg-opacity-50" @click="showModal = false" aria-hidden="true"></div>
+        <div class="fixed inset-0 bg-black/50" @click="showModal = false" aria-hidden="true"></div>
         
         <!-- Modal container - centered on screen -->
         <div class="flex items-center justify-center min-h-screen p-4">
@@ -527,9 +530,12 @@
                                            x-ref="firstField"
                                            autocomplete="name"
                                            x-model="formData.name"
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-village-brown focus:border-village-brown"
+                                           :aria-invalid="errors.name ? 'true' : null"
+                                           aria-describedby="name-error"
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-village-brown focus:border-village-brown"
                                            placeholder="John Doe"
                                            required>
+                                    <p id="name-error" class="mt-1 text-sm text-red-700" x-cloak x-show="errors.name" x-text="errors.name ? errors.name[0] : ''"></p>
                                 </div>
 
                                 <div>
@@ -539,9 +545,12 @@
                                            name="email"
                                            autocomplete="email"
                                            x-model="formData.email"
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-village-brown focus:border-village-brown"
+                                           :aria-invalid="errors.email ? 'true' : null"
+                                           aria-describedby="email-error"
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-village-brown focus:border-village-brown"
                                            placeholder="john@example.com"
                                            required>
+                                    <p id="email-error" class="mt-1 text-sm text-red-700" x-cloak x-show="errors.email" x-text="errors.email ? errors.email[0] : ''"></p>
                                 </div>
 
                                 <div>
@@ -551,9 +560,12 @@
                                            name="phone"
                                            autocomplete="tel"
                                            x-model="formData.phone"
-                                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-village-brown focus:border-village-brown"
+                                           :aria-invalid="errors.phone ? 'true' : null"
+                                           aria-describedby="phone-error"
+                                           class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-village-brown focus:border-village-brown"
                                            placeholder="0400 000 000"
                                            required>
+                                    <p id="phone-error" class="mt-1 text-sm text-red-700" x-cloak x-show="errors.phone" x-text="errors.phone ? errors.phone[0] : ''"></p>
                                 </div>
 
                                 <!-- Modal Footer with action buttons -->
@@ -566,7 +578,7 @@
                                         <span x-show="isSubmitting">Sending...</span>
                                     </button>
                                     <button type="button" 
-                                            @click="showModal = false; submitStatus.show = false"
+                                            @click="showModal = false; submitStatus.show = false; errors = {}"
                                             :disabled="isSubmitting"
                                             class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-village-brown sm:mt-0 sm:w-auto sm:text-sm transition-colors">
                                         Cancel
@@ -590,9 +602,4 @@
     </a>
 </div>
 
-<style>
-    [x-cloak] {
-        display: none !important;
-    }
-</style>
 @endsection
