@@ -100,32 +100,32 @@
             <div class="p-8 flex-grow flex flex-col">
                 <ul class="space-y-4 mb-8 flex-grow">
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">2 Sessions Per Week</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Access To Open Gym</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">No Lock-In Contracts</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">No Joining Fee</span>
                     </li>
                 </ul>
                 <p class="text-sm text-gray-500 italic mb-6 text-center">Can use 2 HIRT Classes + 1 60min class</p>
-                    <button @click="showModal = true; selectedLevel = 'Level 1'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Level 1'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
             </div>
@@ -141,38 +141,38 @@
             <div class="p-8 flex-grow flex flex-col">
                 <ul class="space-y-4 mb-8 flex-grow">
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">3 Sessions per week</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Access To Open Gym</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">FREE Saturday Workshops</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">No Lock-In Contracts</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">No Joining Fee</span>
                     </li>
                 </ul>
                 <p class="text-sm text-gray-500 italic mb-6 text-center">Can use 2 x HIRT classes as 1 session</p>
-                    <button @click="showModal = true; selectedLevel = 'Level 2'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Level 2'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
             </div>
@@ -189,38 +189,38 @@
             <div class="p-8 flex-grow flex flex-col">
                 <ul class="space-y-4 mb-8 flex-grow">
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Unlimited Sessions</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">Access To Open Gym</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">FREE Saturday Workshops</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">No Lock-In Contracts</span>
                     </li>
                     <li class="flex items-start">
-                        <svg class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                        <svg aria-hidden="true" focusable="false" class="h-6 w-6 text-village-brown mr-3 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
                         </svg>
                         <span class="text-gray-700">No Joining Fee</span>
                     </li>
                 </ul>
                 <div class="mb-6 h-6"></div>
-                    <button @click="showModal = true; selectedLevel = 'Level 3'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Level 3'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
             </div>
@@ -251,7 +251,7 @@
                             <p class="font-semibold text-village-brown">✓ No Joining Fee</p>
                         </div>
                     </div>
-                    <button @click="showModal = true; selectedLevel = 'HIRT'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'HIRT'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -270,7 +270,7 @@
                         <p>Structured to suit your individual needs. In these one-on-one sessions, the trainers' attention is fully focused on you.</p>
                         <p class="text-village-brown font-semibold">Dive deeper into your goals</p>
                     </div>
-                    <button @click="showModal = true; selectedLevel = 'Personal Coaching'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Personal Coaching'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -293,7 +293,7 @@
                             <p class="font-semibold text-village-brown">✓ 12 Week Expiry</p>
                         </div>
                     </div>
-                    <button @click="showModal = true; selectedLevel = '10-Pack'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = '10-Pack'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -312,7 +312,7 @@
         <div class="text-center group">
             <div class="flex justify-center mb-6">
                 <div class="w-20 h-20 bg-gradient-to-br from-village-brown to-red-800 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <svg aria-hidden="true" focusable="false" class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
                     </svg>
                 </div>
@@ -325,7 +325,7 @@
         <div class="text-center group">
             <div class="flex justify-center mb-6">
                 <div class="w-20 h-20 bg-gradient-to-br from-village-brown to-red-800 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <svg aria-hidden="true" focusable="false" class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                 </div>
@@ -338,7 +338,7 @@
         <div class="text-center group">
             <div class="flex justify-center mb-6">
                 <div class="w-20 h-20 bg-gradient-to-br from-village-brown to-red-800 rounded-2xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                    <svg aria-hidden="true" focusable="false" class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
                     </svg>
                 </div>
@@ -360,12 +360,12 @@
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
                 <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between list-none">
                     <span class="flex items-center text-lg">
-                        <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         CAN I PAY WEEKLY, FORTNIGHTLY OR MONTHLY?
                     </span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
@@ -378,12 +378,12 @@
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
                 <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
                     <span class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         CAN I PAY EFTPOS/CASH RATHER THAN DIRECT DEBIT?
                     </span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
@@ -396,12 +396,12 @@
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
                 <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
                     <span class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         IS THERE ANY TRANSACTION FEES ON TOP OF THE MEMBERSHIP?
                     </span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
@@ -414,12 +414,12 @@
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
                 <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
                     <span class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         CAN I PUT MY MEMBERSHIP ON HOLD IF I CAN'T MAKE IT AND HOW LONG FOR?
                     </span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
@@ -432,12 +432,12 @@
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
                 <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
                     <span class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         WHAT'S THE PROCESS IF I NEED TO CANCEL?
                     </span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
@@ -450,12 +450,12 @@
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
                 <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
                     <span class="flex items-center">
-                        <svg class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         DO YOU OFFER FIFO MEMBERSHIPS?
                     </span>
-                    <svg class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
@@ -468,30 +468,50 @@
 </div>
     <div x-show="showModal" 
          x-cloak
+         x-data="{ lastFocus: null }"
+         x-init="$watch('showModal', (open) => {
+             if (open) {
+                 lastFocus = document.activeElement;
+                 $nextTick(() => $refs.firstField.focus());
+             } else if (lastFocus) {
+                 lastFocus.focus();
+             }
+         })"
          @keydown.escape.window="showModal = false"
+         role="dialog"
+         aria-modal="true"
+         aria-labelledby="membership-modal-title"
          style="display: none;"
          class="fixed inset-0 z-50 overflow-y-auto">
         
         <!-- Semi-transparent background overlay - click to close -->
-        <div class="fixed inset-0 bg-black bg-opacity-50" @click="showModal = false"></div>
+        <div class="fixed inset-0 bg-black bg-opacity-50" @click="showModal = false" aria-hidden="true"></div>
         
         <!-- Modal container - centered on screen -->
         <div class="flex items-center justify-center min-h-screen p-4">
             
             <!-- Actual modal content box -->
             <!-- @click.stop prevents clicks inside from closing the modal -->
-            <div @click.stop class="relative bg-white rounded-lg shadow-xl max-w-lg w-full">
+            <div @click.stop
+                 @keydown.tab="
+                     const items = [...$el.querySelectorAll('input, button:not([disabled])')];
+                     const first = items[0], last = items[items.length - 1];
+                     if ($event.shiftKey && document.activeElement === first) { $event.preventDefault(); last.focus(); }
+                     else if (!$event.shiftKey && document.activeElement === last) { $event.preventDefault(); first.focus(); }
+                 "
+                 class="relative bg-white rounded-lg shadow-xl max-w-lg w-full">
                 
                 <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div class="sm:flex sm:items-start">
                         <div class="mt-3 text-center sm:mt-0 sm:text-left w-full">
-                            <h3 class="text-2xl leading-6 font-bold text-gray-900 mb-4">
+                            <h3 id="membership-modal-title" class="text-2xl leading-6 font-bold text-gray-900 mb-4">
                                 Get Started - <span x-text="selectedLevel"></span> Membership
                             </h3>
                             
                             <!-- Form -->
                             <form @submit.prevent="submitForm" class="space-y-4">
                                 <!-- Success/Error Message -->
+                                <p class="sr-only" role="status" aria-live="polite" x-text="submitStatus.show ? submitStatus.message : ''"></p>
                                 <div x-show="submitStatus.show" 
                                      x-transition
                                      :class="submitStatus.type === 'success' ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'"
@@ -504,6 +524,8 @@
                                     <input type="text" 
                                            id="name" 
                                            name="name"
+                                           x-ref="firstField"
+                                           autocomplete="name"
                                            x-model="formData.name"
                                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-village-brown focus:border-village-brown"
                                            placeholder="John Doe"
@@ -515,6 +537,7 @@
                                     <input type="email" 
                                            id="email" 
                                            name="email"
+                                           autocomplete="email"
                                            x-model="formData.email"
                                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-village-brown focus:border-village-brown"
                                            placeholder="john@example.com"
@@ -526,6 +549,7 @@
                                     <input type="tel" 
                                            id="phone" 
                                            name="phone"
+                                           autocomplete="tel"
                                            x-model="formData.phone"
                                            class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-village-brown focus:border-village-brown"
                                            placeholder="0400 000 000"

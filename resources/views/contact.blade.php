@@ -5,7 +5,7 @@
 @section('breadcrumb', 'Contact')
 
 @push('scripts')
-<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}"></script>
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site_key') }}" async defer></script>
 @endpush
 
 @section('content')
@@ -36,7 +36,8 @@
         this.submitStatus.show = false;
 
         try {
-            // Generate reCAPTCHA token
+            // Generate reCAPTCHA token (the script loads async, so wait until it is ready)
+            await new Promise((resolve) => grecaptcha.ready(resolve));
             const token = await grecaptcha.execute('{{ config('services.recaptcha.site_key') }}', {
                 action: 'contact_form'
             });
@@ -105,6 +106,7 @@
     <div class="relative h-96 bg-gray-200">
         <!-- Google Maps Embed -->
         <iframe 
+            title="Map showing The Village Athletica at 84 Railway Parade, Midland"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.8513374492286!2d116.00295557808226!3d-31.891691725618404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32b9bb61410b09%3A0xd69114e128638e60!2sThe%20Village%20Athletica!5e1!3m2!1sen!2sau!4v1768026809414!5m2!1sen!2sau"
             class="absolute inset-0 w-full h-full"
             style="border:0;" 
@@ -115,7 +117,7 @@
         
         <!-- View in Google Maps Button -->
         <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-            <a href="https://maps.app.goo.gl/N52BHhFjw1nVDZjv6" target="_blank" class="inline-block bg-village-brown text-white px-8 py-4 rounded-lg font-bold hover:bg-red-800 transition shadow-xl">
+            <a href="https://maps.app.goo.gl/N52BHhFjw1nVDZjv6" target="_blank" rel="noopener" class="inline-block bg-village-brown text-white px-8 py-4 rounded-lg font-bold hover:bg-red-800 transition shadow-xl">
                 VIEW IN GOOGLE MAPS
             </a>
         </div>
@@ -136,6 +138,8 @@
 
                 <form @submit.prevent="submitForm" class="space-y-6">
                     <!-- Success/Error Message -->
+                    <!-- Announces the result to screen readers (the visible box below appears/disappears, which isn't announced reliably) -->
+                    <p class="sr-only" role="status" aria-live="polite" x-text="submitStatus.show ? submitStatus.message : ''"></p>
                     <div x-show="submitStatus.show" 
                          x-transition
                          :class="submitStatus.type === 'success' ? 'bg-green-50 border-green-200 text-green-800' : 'bg-red-50 border-red-200 text-red-800'"
@@ -152,6 +156,7 @@
                             type="text" 
                             id="first_name" 
                             name="first_name"
+                            autocomplete="given-name"
                             x-model="formData.first_name"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
@@ -168,6 +173,7 @@
                             type="text" 
                             id="last_name" 
                             name="last_name"
+                            autocomplete="family-name"
                             x-model="formData.last_name"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
@@ -184,6 +190,7 @@
                             type="email" 
                             id="email" 
                             name="email"
+                            autocomplete="email"
                             x-model="formData.email"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
@@ -200,6 +207,7 @@
                             type="tel" 
                             id="phone" 
                             name="phone"
+                            autocomplete="tel"
                             x-model="formData.phone"
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-village-brown focus:border-transparent transition"
@@ -301,6 +309,7 @@
                         <button 
                             type="submit"
                             :disabled="isSubmitting"
+                            :aria-busy="isSubmitting.toString()"
                             :class="isSubmitting ? 'opacity-50 cursor-not-allowed' : ''"
                             class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white px-8 py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
                         >
@@ -319,7 +328,7 @@
                 <h3 class="text-2xl font-bold text-gray-900 mb-6">Get Social</h3>
                 <div class="flex justify-center">
                     <a href="https://www.instagram.com/thevillageathletica" target="_blank" rel="noopener" aria-label="The Village Athletica on Instagram" class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-xl hover:scale-110 transition-transform duration-300 shadow-lg">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+                        <svg aria-hidden="true" focusable="false" class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
                         </svg>
                     </a>
@@ -334,7 +343,7 @@
                     <!-- Address -->
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-village-brown rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" focusable="false" class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                             </svg>
@@ -349,7 +358,7 @@
                     <!-- Phone -->
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-village-brown rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" focusable="false" class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                             </svg>
                         </div>
@@ -363,7 +372,7 @@
                     <!-- Email -->
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-village-brown rounded-lg flex items-center justify-center mr-4">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg aria-hidden="true" focusable="false" class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                             </svg>
                         </div>

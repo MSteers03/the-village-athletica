@@ -40,7 +40,6 @@
     @include('partials.structured-data', ['breadcrumb' => trim($__env->yieldContent('breadcrumb')) ?: null])
     @stack('structured-data')
 
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google tag (gtag.js) -->
@@ -54,8 +53,10 @@
     </script>
 </head>
 <body class="font-sans bg-village-grey">
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:bg-white focus:text-village-brown focus:px-4 focus:py-2 focus:rounded focus:shadow-lg font-bold">Skip to main content</a>
+
     <!-- Header with Mobile Menu -->
-    <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }">
+    <header class="bg-white text-village-brown shadow-lg sticky top-0 z-50" x-data="{ mobileMenuOpen: false }" @keydown.escape.window="mobileMenuOpen = false">
         <div class="container mx-auto px-4 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
@@ -64,42 +65,45 @@
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:block">
+                <nav class="hidden md:block" aria-label="Main">
                     <ul class="flex space-x-6">
-                        <li><a href="/" class="hover:text-red-700 transition font-bold">Home</a></li>
-                        <li><a href="/timetable" class="hover:text-red-700 transition font-bold">Timetable</a></li>
-                        <li><a href="/pricing" class="hover:text-red-700 transition font-bold">Pricing</a></li>
-                        <li><a href="/contact" class="hover:text-red-700 transition font-bold">Contact</a></li>
+                        <li><a href="/" @if(request()->is('/')) aria-current="page" @endif class="hover:text-red-700 transition font-bold">Home</a></li>
+                        <li><a href="/timetable" @if(request()->is('timetable')) aria-current="page" @endif class="hover:text-red-700 transition font-bold">Timetable</a></li>
+                        <li><a href="/pricing" @if(request()->is('pricing')) aria-current="page" @endif class="hover:text-red-700 transition font-bold">Pricing</a></li>
+                        <li><a href="/contact" @if(request()->is('contact')) aria-current="page" @endif class="hover:text-red-700 transition font-bold">Contact</a></li>
                     </ul>
                 </nav>
 
                 <!-- Mobile Menu Button -->
-                <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2">
-                    <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <button type="button" @click="mobileMenuOpen = !mobileMenuOpen" :aria-expanded="mobileMenuOpen.toString()" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu" class="md:hidden p-2">
+                    <svg x-show="!mobileMenuOpen" aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                     </svg>
-                    <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg x-show="mobileMenuOpen" x-cloak aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
             </div>
 
             <!-- Mobile Navigation -->
-            <nav x-show="mobileMenuOpen" 
+            <nav id="mobile-menu"
+                 aria-label="Mobile"
+                 x-show="mobileMenuOpen"
+                 x-cloak
                  x-transition
                  class="md:hidden mt-4 pb-4">
                 <ul class="space-y-2">
-                    <li><a href="/" class="block py-2 hover:text-red-700 transition font-bold">Home</a></li>
-                    <li><a href="/timetable" class="block py-2 hover:text-red-700 transition font-bold">Timetable</a></li>
-                    <li><a href="/pricing" class="block py-2 hover:text-red-700 transition font-bold">Pricing</a></li>
-                    <li><a href="/contact" class="block py-2 hover:text-red-700 transition font-bold">Contact</a></li>
+                    <li><a href="/" @if(request()->is('/')) aria-current="page" @endif class="block py-2 hover:text-red-700 transition font-bold">Home</a></li>
+                    <li><a href="/timetable" @if(request()->is('timetable')) aria-current="page" @endif class="block py-2 hover:text-red-700 transition font-bold">Timetable</a></li>
+                    <li><a href="/pricing" @if(request()->is('pricing')) aria-current="page" @endif class="block py-2 hover:text-red-700 transition font-bold">Pricing</a></li>
+                    <li><a href="/contact" @if(request()->is('contact')) aria-current="page" @endif class="block py-2 hover:text-red-700 transition font-bold">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <!-- Main Content -->
-    <main class="container mx-auto px-4">
+    <main id="main-content" tabindex="-1" class="container mx-auto px-4 focus:outline-none">
         @yield('content')
     </main>
 
@@ -108,20 +112,22 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">The Village Athletica</h3>
+                    <h2 class="text-xl font-bold mb-4">The Village Athletica</h2>
                     <p class="text-sm">Your local fitness community dedicated to helping you achieve your goals.</p>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+                    <nav aria-label="Footer">
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/" class="hover:text-red-200 transition">Home</a></li>
-                        <li><a href="/timetable" class="hover:text-red-200 transition">Timetable</a></li>
-                        <li><a href="/pricing" class="hover:text-red-200 transition">Pricing</a></li>
-                        <li><a href="/contact" class="hover:text-red-200 transition">Contact</a></li>
+                        <li><a href="/" @if(request()->is('/')) aria-current="page" @endif class="hover:text-red-200 transition">Home</a></li>
+                        <li><a href="/timetable" @if(request()->is('timetable')) aria-current="page" @endif class="hover:text-red-200 transition">Timetable</a></li>
+                        <li><a href="/pricing" @if(request()->is('pricing')) aria-current="page" @endif class="hover:text-red-200 transition">Pricing</a></li>
+                        <li><a href="/contact" @if(request()->is('contact')) aria-current="page" @endif class="hover:text-red-200 transition">Contact</a></li>
                     </ul>
+                    </nav>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <h2 class="text-xl font-bold mb-4">Contact Info</h2>
                     <p class="text-sm">84 Railway Parade</p>
                     <p class="text-sm">Midland, WA, 6056</p>
                     <p class="text-sm"><a href="tel:0449523937" class="hover:text-red-200">0449 523 937</a></p>
