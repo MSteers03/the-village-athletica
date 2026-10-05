@@ -3,23 +3,31 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const indicators = document.querySelectorAll('.indicator');
+    if (!carousel || !prevBtn || !nextBtn) return;
     const originalItems = Array.from(carousel.children);
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let currentIndex = 0;
     let autoScrollInterval;
     let isTransitioning = false;
+
+    // Clones only exist for the visual loop, so hide them from screen readers.
+    function makeClone(item) {
+        const clone = item.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        clone.querySelectorAll('img').forEach(img => img.setAttribute('alt', ''));
+        return clone;
+    }
 
     // Clone items for infinite loop
     function setupInfiniteLoop() {
         // Clone all items and append to the end
         originalItems.forEach(item => {
-            const clone = item.cloneNode(true);
-            carousel.appendChild(clone);
+            carousel.appendChild(makeClone(item));
         });
         
         // Clone all items and prepend to the beginning
         originalItems.slice().reverse().forEach(item => {
-            const clone = item.cloneNode(true);
-            carousel.insertBefore(clone, carousel.firstChild);
+            carousel.insertBefore(makeClone(item), carousel.firstChild);
         });
         
         // Start at the "real" first item (after prepended clones)
@@ -53,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isTransitioning = true;
         const itemWidth = getItemWidth();
         
-        if (smooth) {
+        if (smooth && !reducedMotion.matches) {
             carousel.style.transition = 'transform 700ms ease-in-out';
         } else {
             carousel.style.transition = 'none';
@@ -117,6 +125,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Auto-scroll functionality
     function startAutoScroll() {
+        clearInterval(autoScrollInterval);
+        // No auto-advance for visitors who prefer reduced motion, or while the page is hidden.
+        if (reducedMotion.matches || document.hidden) return;
         autoScrollInterval = setInterval(nextSlide, 5000);
     }
 
@@ -136,5 +147,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
     carousel.parentElement.addEventListener('mouseleave', () => {
         startAutoScroll();
+    });
+
+    // Pause while a keyboard user is on the carousel controls
+    carousel.parentElement.addEventListener('focusin', () => {
+        clearInterval(autoScrollInterval);
+    });
+
+    carousel.parentElement.addEventListener('focusout', (event) => {
+        if (!carousel.parentElement.contains(event.relatedTarget)) {
+            startAutoScroll();
+        }
+    });
+
+    // Stop rotating in background tabs
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+            clearInterval(autoScrollInterval);
+        } else {
+            startAutoScroll();
+        }
+    });
+
+    // Keep the current slide aligned when the viewport (and card width) changes
+    let resizeFrame;
+    window.addEventListener('resize', () => {
+        cancelAnimationFrame(resizeFrame);
+        resizeFrame = requestAnimationFrame(() => {
+            carousel.style.transition = 'none';
+            carousel.style.transform = `translateX(-${currentIndex * getItemWidth()}px)`;
+        });
     });
 });

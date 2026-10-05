@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,19 +12,19 @@
     <div class="max-w-md w-full mx-4">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
             <div class="bg-village-brown text-white p-6 text-center">
-                <h1 class="text-2xl font-bold">🚧 Site Under Maintenance</h1>
+                <h1 class="text-2xl font-bold"><span aria-hidden="true">🚧</span> Site Under Maintenance</h1>
                 <p class="mt-2">We're working hard to improve your experience</p>
             </div>
             
             <div class="p-6">
                 @if(session('success'))
-                    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                    <div role="status" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
                         {{ session('success') }}
                     </div>
                 @endif
                 
                 @if(session('error'))
-                    <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                    <div role="alert" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
                         {{ session('error') }}
                     </div>
                 @endif
@@ -39,19 +39,19 @@
                     
                     <div class="mb-4">
                         <label for="name" class="block text-gray-700 font-medium mb-2">Full Name *</label>
-                        <input type="text" id="name" name="name" required 
+                        <input type="text" id="name" name="name" autocomplete="name" required 
                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-village-brown">
                     </div>
                     
                     <div class="mb-4">
                         <label for="email" class="block text-gray-700 font-medium mb-2">Email Address *</label>
-                        <input type="email" id="email" name="email" required 
+                        <input type="email" id="email" name="email" autocomplete="email" required 
                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-village-brown">
                     </div>
                     
                     <div class="mb-4">
                         <label for="phone" class="block text-gray-700 font-medium mb-2">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" 
+                        <input type="tel" id="phone" name="phone" autocomplete="tel" 
                                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-village-brown">
                     </div>
                     

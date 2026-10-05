@@ -6,3 +6,7 @@
     --color-village-brown: #ad3925;
     --color-village-grey: #ece8e7;
 }
+/* Hide Alpine-controlled elements (e.g. the mobile menu) until Alpine has initialised. */
+[x-cloak] {
+    display: none !important;
+}
