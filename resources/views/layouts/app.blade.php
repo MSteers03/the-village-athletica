@@ -36,6 +36,9 @@
     <meta name="twitter:image" content="{{ $seoImage }}">
 
     <link rel="preconnect" href="https://res.cloudinary.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap">
 
     @include('partials.structured-data', ['breadcrumb' => trim($__env->yieldContent('breadcrumb')) ?: null])
     @stack('structured-data')

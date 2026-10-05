@@ -6,7 +6,10 @@
 @section('content')
 <!-- Hero Section -->
 {{-- VIDEO: aspect-video on mobile = no cropping, vh heights on larger screens --}}
-<div class="relative w-full overflow-hidden aspect-video sm:aspect-auto sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-2xl mx-auto max-w-[98vw] shadow-2xl">    <video
+<div class="relative w-full overflow-hidden aspect-video sm:aspect-auto sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-2xl mx-auto max-w-[98vw] shadow-2xl" x-data="{ playing: false }" x-init="playing = !$refs.video.paused">    <video
+        x-ref="video"
+        @play="playing = true"
+        @pause="playing = false"
         autoplay
         muted
         loop
@@ -16,6 +19,16 @@
     >
         <source src="{{ config('filesystems.disks.r2.url') }}/welcome_to_the_village.mp4" type="video/mp4">
     </video>
+
+    <!-- Pause/play control for the looping video -->
+    <button type="button"
+            x-cloak
+            @click="playing ? $refs.video.pause() : $refs.video.play()"
+            :aria-label="playing ? 'Pause video' : 'Play video'"
+            class="absolute bottom-3 right-3 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors focus:outline-none focus:ring-4 focus:ring-white/50">
+        <svg x-show="playing" aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        <svg x-show="!playing" aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
 </div>
 
 <!-- About Section -->
@@ -39,7 +52,7 @@
             </p>
 
             <a href="/contact" class="inline-block bg-black text-white px-10 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
-                CLICK HERE!
+                GET IN TOUCH
             </a>
         </div>
 
@@ -75,7 +88,13 @@
         @foreach($athletes as $athlete)
         <div class="flex-shrink-0 w-64 md:w-80">
             <div class="relative h-96 md:h-[500px] rounded-lg overflow-hidden shadow-lg">
-                <img src="{{ cloudinary()->image($athlete)->addTransformation('c_limit,h_1000,f_auto,q_auto')->toUrl() }}"
+                <img src="{{ cloudinary()->image($athlete)->addTransformation('c_fill,w_640,h_1000,f_auto,q_auto')->toUrl() }}"
+                     srcset="{{ cloudinary()->image($athlete)->addTransformation('c_fill,w_320,h_500,f_auto,q_auto')->toUrl() }} 320w,
+                             {{ cloudinary()->image($athlete)->addTransformation('c_fill,w_480,h_750,f_auto,q_auto')->toUrl() }} 480w,
+                             {{ cloudinary()->image($athlete)->addTransformation('c_fill,w_640,h_1000,f_auto,q_auto')->toUrl() }} 640w"
+                     sizes="(min-width: 768px) 320px, 256px"
+                     width="320"
+                     height="500"
                      class="w-full h-full object-cover"
                      alt="{{ ucwords(str_replace('-', ' ', $athlete)) }} training at The Village Athletica gym in Midland"
                      loading="{{ $loop->index < 4 ? 'eager' : 'lazy' }}"
@@ -84,6 +103,12 @@
         </div>
         @endforeach
     </div>
+
+    <!-- Pause/play auto-advance -->
+    <button type="button" id="pause-btn" aria-controls="athlete-carousel" aria-label="Pause carousel" class="absolute bottom-10 right-6 z-30 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors focus:outline-none focus:ring-4 focus:ring-white/50">
+        <svg data-icon="pause" aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+        <svg data-icon="play" aria-hidden="true" focusable="false" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
 
     <!-- Navigation Buttons -->
     <button type="button" id="prev-btn" aria-controls="athlete-carousel" class="absolute left-2 top-1/2 -translate-y-1/2 z-30 flex items-center justify-center w-12 h-12 rounded-full bg-black/50 hover:bg-black/70 transition-colors focus:outline-none focus:ring-4 focus:ring-white/50">

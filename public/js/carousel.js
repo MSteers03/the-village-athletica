@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.getElementById('athlete-carousel');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
+    const pauseBtn = document.getElementById('pause-btn');
     const indicators = document.querySelectorAll('.indicator');
     if (!carousel || !prevBtn || !nextBtn) return;
     const originalItems = Array.from(carousel.children);
@@ -9,6 +10,8 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     let autoScrollInterval;
     let isTransitioning = false;
+    // Visitors who prefer reduced motion start paused; anyone can pause or resume with the button.
+    let userPaused = reducedMotion.matches;
 
     // Clones only exist for the visual loop, so hide them from screen readers.
     function makeClone(item) {
@@ -127,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function startAutoScroll() {
         clearInterval(autoScrollInterval);
         // No auto-advance for visitors who prefer reduced motion, or while the page is hidden.
-        if (reducedMotion.matches || document.hidden) return;
+        if (userPaused || document.hidden) return;
         autoScrollInterval = setInterval(nextSlide, 5000);
     }
 
@@ -136,7 +139,26 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoScroll();
     }
 
+    function updatePauseButton() {
+        if (!pauseBtn) return;
+        pauseBtn.setAttribute('aria-label', userPaused ? 'Play carousel' : 'Pause carousel');
+        pauseBtn.querySelector('[data-icon="pause"]').classList.toggle('hidden', userPaused);
+        pauseBtn.querySelector('[data-icon="play"]').classList.toggle('hidden', !userPaused);
+    }
+
+    if (pauseBtn) {
+        pauseBtn.addEventListener('click', () => {
+            userPaused = !userPaused;
+            updatePauseButton();
+            if (userPaused) {
+                clearInterval(autoScrollInterval);
+            }
+            // When resuming, auto-advance restarts as soon as focus/hover leaves the carousel
+        });
+    }
+
     // Initialize
+    updatePauseButton();
     setupInfiniteLoop();
     startAutoScroll();
 
