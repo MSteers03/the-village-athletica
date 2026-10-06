@@ -10,10 +10,10 @@
 
 @section('content')
 <!-- Hero Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-village-brown to-red-900 text-white py-20 mb-16">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-        <h1 class="text-6xl font-bold mb-6">Get In Touch</h1>
-        <p class="text-xl text-red-100 leading-relaxed">We'd love to hear from you</p>
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-village-brown to-red-900 text-white py-12 md:py-20 mb-8 md:mb-16">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-3 md:mb-6">Get In Touch</h1>
+        <p class="text-lg md:text-xl text-red-100 leading-relaxed">We'd love to hear from you</p>
     </div>
 </div>
 
@@ -140,8 +140,8 @@
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <!-- Left Column - Contact Form (2/3 width) -->
         <div class="lg:col-span-2">
-            <div class="bg-white rounded-2xl shadow-xl p-8">
-                <h2 class="text-4xl font-bold text-village-brown mb-4">MESSAGE OUR TEAM</h2>
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-village-brown mb-4">MESSAGE OUR TEAM</h2>
                 <p class="text-gray-600 mb-8 leading-relaxed">
                     If you're interested in joining or wanting to know more about The Village, feel free to contact us using the form below.
                 </p>
@@ -348,9 +348,9 @@
         </div>
 
         <!-- Right Column - Social and Contact Info (1/3 width) -->
-        <div class="lg:col-span-1 space-y-8">
+        <div class="lg:col-span-1 grid grid-cols-1 md:grid-cols-2 md:grid-flow-dense lg:grid-cols-1 gap-8 content-start">
             <!-- Get Social -->
-            <div class="bg-white rounded-2xl shadow-xl p-8">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6">Get Social</h3>
                 <div class="flex justify-center">
                     <a href="https://www.instagram.com/thevillageathletica" target="_blank" rel="noopener" aria-label="The Village Athletica on Instagram" class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-xl hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -362,7 +362,7 @@
             </div>
 
             <!-- Contact Info -->
-            <div class="bg-white rounded-2xl shadow-xl p-8">
+            <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 md:col-span-2 lg:col-span-1">
                 <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Info</h3>
                 
                 <div class="space-y-6">
@@ -403,8 +403,8 @@
                             </svg>
                         </div>
                         <div>
-                            <a href="mailto:info@thevillageathletica.com.au" class="text-gray-700 hover:text-village-brown transition break-all">
-                                info@thevillageathletica.com.au
+                            <a href="mailto:info@thevillageathletica.com.au" class="text-gray-700 hover:text-village-brown transition [overflow-wrap:anywhere]">
+                                info@<wbr>thevillageathletica.com.au
                             </a>
                         </div>
                     </div>
@@ -412,7 +412,7 @@
             </div>
 
             <!-- Opening Hours -->
-            <div class="bg-gradient-to-br from-village-brown to-red-900 text-white rounded-2xl shadow-xl p-8">
+            <div class="bg-gradient-to-br from-village-brown to-red-900 text-white rounded-2xl shadow-xl p-6 md:p-8">
                 <h3 class="text-2xl font-bold mb-6">Opening Hours</h3>
                 <!-- Keep in sync with the footer hours -->
                 <dl class="space-y-3 text-sm">

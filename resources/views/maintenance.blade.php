@@ -11,7 +11,7 @@
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-village-grey min-h-screen flex items-center justify-center">
+<body class="bg-village-grey min-h-screen flex items-center justify-center py-6">
     <div class="max-w-md w-full mx-4">
         <div class="bg-white rounded-lg shadow-lg overflow-hidden">
             <div class="bg-village-brown text-white p-6 text-center">

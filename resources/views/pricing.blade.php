@@ -6,10 +6,10 @@
 
 @section('content')
 <!-- Hero Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-village-brown to-red-900 text-white py-20 mb-16">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-        <h1 class="text-6xl font-bold mb-6">Join The Village Family</h1>
-        <p class="text-xl text-red-100 leading-relaxed">No contracts. No joining fees. Just results.</p>
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-gradient-to-br from-village-brown to-red-900 text-white py-12 md:py-20 mb-8 md:mb-16">
+    <div class="max-w-4xl mx-auto px-4 md:px-8 text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-3 md:mb-6">Join The Village Family</h1>
+        <p class="text-lg md:text-xl text-red-100 leading-relaxed">No contracts. No joining fees. Just results.</p>
     </div>
 </div>
 
@@ -88,11 +88,11 @@
 </div>
 
 <!-- Main Membership Levels -->
-<div class="mb-24">
-    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Membership Options</h2>
+<div class="mb-16 md:mb-24">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Membership Options</h2>
     <p class="text-center text-gray-600 mb-12 text-lg">Choose the plan that fits your lifestyle</p>
     
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-md lg:max-w-7xl mx-auto px-4">
         <!-- Level 1 -->
         <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl border border-gray-100 flex flex-col">
             <div class="bg-gradient-to-br from-village-grey to-gray-200 text-gray-800 py-8 px-6 text-center">
@@ -232,12 +232,12 @@
 </div>
 
 <!-- Additional Options -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-village-grey py-20 mb-24">
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-village-grey py-12 md:py-20 mb-16 md:mb-24">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Additional Options</h2>
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Additional Options</h2>
         <p class="text-center text-gray-600 mb-12 text-lg">Flexible training solutions for every schedule</p>
         
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-md lg:max-w-none mx-auto">
             <!-- HIRT -->
             <div class="bg-white rounded-2xl shadow-xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col">
                 <div class="bg-gradient-to-br from-village-brown to-red-800 text-white py-6 px-6 text-center">
@@ -306,9 +306,9 @@
 </div>
 
 <!-- Key Features Section -->
-<div class="mb-24 max-w-7xl mx-auto px-4">
-    <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Why Choose The Village?</h2>
-    <p class="text-center text-gray-600 mb-16 text-lg">More than just a gym membership</p>
+<div class="mb-16 md:mb-24 max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Why Choose The Village?</h2>
+    <p class="text-center text-gray-600 mb-12 md:mb-16 text-lg">More than just a gym membership</p>
     
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- No Lock-in Contracts -->
@@ -353,116 +353,116 @@
 </div>
 
 <!-- FAQ Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-village-grey py-20 mb-24">
-    <div class="max-w-4xl mx-auto px-8">
-        <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Frequently Asked Questions</h2>
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-village-grey py-12 md:py-20 mb-16 md:mb-24">
+    <div class="max-w-4xl mx-auto px-4 md:px-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900">Frequently Asked Questions</h2>
         <p class="text-center text-gray-600 mb-12 text-lg">Everything you need to know</p>
         
         <div class="space-y-4">
             <!-- FAQ Item 1 -->
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between list-none">
-                    <span class="flex items-center text-lg">
+                <summary class="p-5 md:p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between gap-3 list-none [&::-webkit-details-marker]:hidden">
+                    <span class="flex items-center">
                         <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         CAN I PAY WEEKLY, FORTNIGHTLY OR MONTHLY?
                     </span>
-                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 flex-shrink-0 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
-                <div class="px-6 pb-6 text-gray-600">
+                <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600">
                     <p>To make life easy we use Ezi Debit and memberships come out on a fortnightly basis.</p>
                 </div>
             </details>
 
             <!-- FAQ Item 2 -->
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
+                <summary class="p-5 md:p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between gap-3 list-none [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center">
                         <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         CAN I PAY EFTPOS/CASH RATHER THAN DIRECT DEBIT?
                     </span>
-                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 flex-shrink-0 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
-                <div class="px-6 pb-6 text-gray-600">
+                <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600">
                     <p>Unfortunately we don’t accept cash as a ongoing basis due to us sometime being forgetful and let’s face it…who enjoys asking for money? If Direct Debit is something you are not comfortable with though, we do have other options.</p>
                 </div>
             </details>
 
             <!-- FAQ Item 3 -->
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
+                <summary class="p-5 md:p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between gap-3 list-none [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center">
                         <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         IS THERE ANY TRANSACTION FEES ON TOP OF THE MEMBERSHIP?
                     </span>
-                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 flex-shrink-0 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
-                <div class="px-6 pb-6 text-gray-600">
+                <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600">
                     <p>There are no little hidden fees, but! If your payment bounce you will be charge $1.65 for a “Missed Payment”</p>
                 </div>
             </details>
 
             <!-- FAQ Item 4 -->
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
+                <summary class="p-5 md:p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between gap-3 list-none [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center">
                         <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         CAN I PUT MY MEMBERSHIP ON HOLD IF I CAN'T MAKE IT AND HOW LONG FOR?
                     </span>
-                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 flex-shrink-0 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
-                <div class="px-6 pb-6 text-gray-600">
+                <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600">
                     <p>Yes absolutely… This isn’t a home loan. All we ask is for the return date so we can set the pause up for you.</p>
                 </div>
             </details>
 
             <!-- FAQ Item 5 -->
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
+                <summary class="p-5 md:p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between gap-3 list-none [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center">
                         <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         WHAT'S THE PROCESS IF I NEED TO CANCEL?
                     </span>
-                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 flex-shrink-0 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
-                <div class="px-6 pb-6 text-gray-600">
+                <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600">
                     <p>All we ask is for you to send us an email stating why you are cancelling and when you want to stop.</p>
                 </div>
             </details>
 
             <!-- FAQ Item 6 -->
             <details class="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 group">
-                <summary class="p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between">
+                <summary class="p-5 md:p-6 cursor-pointer font-semibold text-gray-800 hover:text-village-brown transition flex items-center justify-between gap-3 list-none [&::-webkit-details-marker]:hidden">
                     <span class="flex items-center">
                         <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                             <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                         </svg>
                         DO YOU OFFER FIFO MEMBERSHIPS?
                     </span>
-                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 transform transition-transform" fill="currentColor" viewBox="0 0 20 20">
+                    <svg aria-hidden="true" focusable="false" class="w-5 h-5 flex-shrink-0 transform transition-transform group-open:rotate-180" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                     </svg>
                 </summary>
-                <div class="px-6 pb-6 text-gray-600">
+                <div class="px-5 md:px-6 pb-5 md:pb-6 text-gray-600">
                     <p>Yes we certainly do. We customise your membership payments to suit your FIFO roster. All you need to do is tell us the dates and we sort out the rest.</p>
                 </div>
             </details>
@@ -594,10 +594,10 @@
 </div>
 
 <!-- CTA Section -->
-<div class="text-center py-20 max-w-4xl mx-auto px-4">
-    <h2 class="text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
-    <p class="text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
-    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-12 py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
+<div class="text-center py-12 md:py-20 max-w-4xl mx-auto px-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
+    <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
+    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
         Contact Us Now →
     </a>
 </div>
