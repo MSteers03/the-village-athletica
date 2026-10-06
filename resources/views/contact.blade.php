@@ -414,21 +414,21 @@
             <!-- Opening Hours -->
             <div class="bg-gradient-to-br from-village-brown to-red-900 text-white rounded-2xl shadow-xl p-8">
                 <h3 class="text-2xl font-bold mb-6">Opening Hours</h3>
-                <div class="space-y-3 text-sm">
-                    <div class="flex justify-between">
-                        <span class="font-semibold">Monday - Friday</span>
-                        <span>5:30 AM - 10:30 AM</span>
-                        <span>4:30 PM - 6:30 PM</span>
+                <!-- Keep in sync with the footer hours -->
+                <dl class="space-y-3 text-sm">
+                    <div class="flex justify-between gap-4">
+                        <dt class="font-semibold">Monday to Friday</dt>
+                        <dd class="text-right whitespace-nowrap">5:30 AM to 10:30 AM<br>4:30 PM to 6:30 PM</dd>
                     </div>
-                    <div class="flex justify-between">
-                        <span class="font-semibold">Saturday</span>
-                        <span>7:00 AM - 9:00 AM</span>
+                    <div class="flex justify-between gap-4">
+                        <dt class="font-semibold">Saturday</dt>
+                        <dd class="text-right whitespace-nowrap">7:00 AM to 9:00 AM</dd>
                     </div>
-                    <div class="flex justify-between">
-                        <span class="font-semibold">Sunday</span>
-                        <span>Closed</span>
+                    <div class="flex justify-between gap-4">
+                        <dt class="font-semibold">Sunday</dt>
+                        <dd class="text-right whitespace-nowrap">Closed</dd>
                     </div>
-                </div>
+                </dl>
             </div>
         </div>
     </div>
