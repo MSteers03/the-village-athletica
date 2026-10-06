@@ -5,8 +5,8 @@
 
 @section('content')
 <!-- Hero Section -->
-{{-- VIDEO: aspect-video on mobile = no cropping, vh heights on larger screens --}}
-<div class="relative w-full overflow-hidden aspect-video sm:aspect-auto sm:h-[60vh] md:h-[70vh] lg:h-[80vh] rounded-2xl mx-auto max-w-[98vw] shadow-2xl" x-data="{ playing: false }" x-init="playing = !$refs.video.paused">    <video
+{{-- VIDEO: 16:9 on phones and tablets (capped so landscape phones still see the page), vh height on desktop --}}
+<div class="relative w-full overflow-hidden aspect-video max-h-[75vh] lg:aspect-auto lg:h-[80vh] lg:max-h-none rounded-2xl mx-auto max-w-[98vw] shadow-2xl" x-data="{ playing: false }" x-init="playing = !$refs.video.paused">    <video
         x-ref="video"
         @play="playing = true"
         @pause="playing = false"
@@ -32,12 +32,12 @@
 </div>
 
 <!-- About Section -->
-<div class="max-w-7xl mx-auto py-16 px-4 mb-24">
+<div class="max-w-7xl mx-auto py-12 md:py-16 sm:px-4 mb-8 md:mb-24">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         <!-- Left Column - Text -->
         <div class="text-center lg:text-left">
-            <h1 class="text-5xl font-bold text-gray-900 mb-6">Want To Get Fit?</h1>
-            <h2 class="text-3xl font-bold text-village-brown mb-8">Join The Fittest Gym In Midland</h2>
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Want To Get Fit?</h1>
+            <h2 class="text-2xl md:text-3xl font-bold text-village-brown mb-8">Join The Fittest Gym In Midland</h2>
 
             <p class="text-lg text-gray-700 leading-relaxed mb-6">
                 The Village is an inclusive fitness community where your age, or fitness level does not define you. With commitment and diligence anyone can benefit from Functional Fitness and achieve their fitness goals.
@@ -58,7 +58,7 @@
 
         <!-- Right Column -->
         <div class="text-center lg:text-left">
-            <h2 class="text-5xl font-bold text-gray-900 mb-8">MEMBERSHIPS</h2>
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-8">MEMBERSHIPS</h2>
 
             <p class="text-lg text-gray-700 leading-relaxed mb-8">
                 Your membership will be determined by how many sessions per week you'd like to attend. Each session is lead by one of our coaches to help you improve each time you attend a class.
@@ -129,10 +129,10 @@
 <script src="{{ asset('js/carousel.js') }}" defer></script>
 
 <!-- What You Get Section -->
-<div class="max-w-7xl mx-auto mb-24 px-4">
-    <div class="text-center mb-16">
-        <h2 class="text-5xl font-bold text-gray-900 mb-4">You'll Love Training With Us</h2>
-        <h3 class="text-3xl font-bold text-village-brown">What You Get At The Village</h3>
+<div class="max-w-7xl mx-auto mb-16 md:mb-24 px-4">
+    <div class="text-center mb-12 md:mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">You'll Love Training With Us</h2>
+        <h3 class="text-2xl md:text-3xl font-bold text-village-brown">What You Get At The Village</h3>
     </div>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -199,7 +199,7 @@
 </div>
 
 <!-- Benefits Section -->
-<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-white py-20 mb-0">
+<div class="relative left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] w-screen bg-white py-12 md:py-20 mb-0">
     <div class="max-w-7xl mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
             <!-- On Premises Café -->
@@ -252,10 +252,10 @@
 </div>
 
 <!-- CTA Section -->
-<div class="text-center py-20 max-w-4xl mx-auto px-4">
-    <h2 class="text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
-    <p class="text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
-    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-12 py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
+<div class="text-center py-12 md:py-20 max-w-4xl mx-auto px-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
+    <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
+    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
         Contact Us Now →
     </a>
 </div>

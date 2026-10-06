@@ -29,14 +29,15 @@
 </div>
 
 <!-- Timetable Table -->
-<div class="relative max-w-7xl mx-auto mb-8 md:mb-16 overflow-x-auto px-2 md:px-4" role="region" aria-labelledby="timetable-caption" tabindex="0">
-    <div class="px-2 md:px-4">
-        <table class="w-full bg-white shadow-2xl rounded-2xl overflow-hidden min-w-[800px]">
+<div class="max-w-7xl mx-auto mb-8 md:mb-16 px-4 md:px-8">
+    <!-- The time column stays pinned while the days scroll sideways on small screens -->
+    <div class="relative overflow-x-auto rounded-2xl shadow-2xl" role="region" aria-labelledby="timetable-caption" tabindex="0">
+        <table class="w-full bg-white min-w-[800px]">
         <caption id="timetable-caption" class="sr-only">Weekly class timetable</caption>
         <!-- Table Header - Days of Week -->
         <thead>
             <tr class="bg-gradient-to-r from-village-grey to-gray-200">
-                <th scope="col" class="py-3 md:py-5 px-2 md:px-4 text-left font-bold text-gray-800 border-r-2 border-white text-sm md:text-lg">TIME</th>
+                <th scope="col" class="sticky left-0 z-10 bg-village-grey py-3 md:py-5 px-2 md:px-4 text-left font-bold text-gray-800 border-r-2 border-white text-sm md:text-lg">TIME</th>
                 <th scope="col" class="py-3 md:py-5 px-2 md:px-4 text-center font-bold text-gray-800 border-r-2 border-white text-xs md:text-lg">MONDAY</th>
                 <th scope="col" class="py-3 md:py-5 px-2 md:px-4 text-center font-bold text-gray-800 border-r-2 border-white text-xs md:text-lg">TUESDAY</th>
                 <th scope="col" class="py-3 md:py-5 px-2 md:px-4 text-center font-bold text-gray-800 border-r-2 border-white text-xs md:text-lg">WEDNESDAY</th>
@@ -48,7 +49,7 @@
         <tbody>
             <!-- 5:30 AM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">5:30 AM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">5:30 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-grey to-gray-200 text-village-brown font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow">HIRT</div>
                 </td>
@@ -71,7 +72,7 @@
 
             <!-- 6:00 AM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">6:00 AM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">6:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
@@ -94,7 +95,7 @@
 
             <!-- 7:00 AM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">7:00 AM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">7:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
                     <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
@@ -117,7 +118,7 @@
 
             <!-- 8:00 AM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">8:00 AM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">8:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center bg-white border-r-2 border-white">
                     <span class="text-gray-500 text-sm md:text-base" aria-hidden="true">—</span><span class="sr-only">No class</span>
                 </td>
@@ -140,7 +141,7 @@
 
             <!-- 9:00 AM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">9:00 AM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">9:00 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-grey to-gray-200 text-village-brown font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs md:text-sm shadow-sm hover:shadow-md transition-shadow">HIRT</div>
                 </td>
@@ -163,7 +164,7 @@
 
             <!-- 9:30 AM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">9:30 AM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">9:30 AM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
@@ -186,7 +187,7 @@
 
             <!-- 4:30 PM -->
             <tr class="border-b-2 border-village-grey">
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">4:30 PM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">4:30 PM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
@@ -209,7 +210,7 @@
 
             <!-- 5:30 PM -->
             <tr>
-                <th scope="row" class="py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">5:30 PM</th>
+                <th scope="row" class="sticky left-0 z-10 py-2 md:py-4 px-2 md:px-3 font-semibold text-gray-700 bg-village-grey border-r-2 border-white whitespace-nowrap text-xs md:text-base text-left">5:30 PM</th>
                 <td class="py-2 md:py-4 px-2 md:px-3 text-center border-r-2 border-white">
                     <div class="bg-gradient-to-br from-village-brown to-red-800 text-white font-bold py-2 md:py-3 px-1 md:px-3 rounded-lg text-xs shadow-md hover:shadow-lg transition-all hover:scale-105">FUNCTIONAL FITNESS</div>
                 </td>
@@ -241,11 +242,11 @@
         <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-8">
             <div class="flex items-center bg-white px-4 md:px-6 py-3 rounded-xl shadow-md">
                 <div class="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-village-grey to-gray-200 rounded-lg mr-3 flex-shrink-0"></div>
-                <span class="font-bold text-gray-700 text-sm md:text-base">HIRT <span class="text-xs md:text-sm text-gray-500">(30 min)</span></span>
+                <span class="font-bold text-gray-700 text-sm md:text-base">HIRT <span class="text-xs md:text-sm text-gray-500 whitespace-nowrap">(30 min)</span></span>
             </div>
             <div class="flex items-center bg-white px-4 md:px-6 py-3 rounded-xl shadow-md">
                 <div class="w-6 h-6 md:w-8 md:h-8 bg-gradient-to-br from-village-brown to-red-800 rounded-lg mr-3 flex-shrink-0"></div>
-                <span class="font-bold text-gray-700 text-sm md:text-base">FUNCTIONAL FITNESS <span class="text-xs md:text-sm text-gray-500">(60 min)</span></span>
+                <span class="font-bold text-gray-700 text-sm md:text-base">FUNCTIONAL FITNESS <span class="text-xs md:text-sm text-gray-500 whitespace-nowrap">(60 min)</span></span>
             </div>
         </div>
     </div>
