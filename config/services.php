@@ -42,6 +42,11 @@ return [
 
     // Self-hosted Umami analytics. The tracker is only rendered when both the
     // script URL and website ID are set, so local and test builds stay quiet.
+    // Shared secret Uptime Kuma sends to /health/deep (Authorization: Bearer).
+    'health' => [
+        'token' => env('HEALTH_CHECK_TOKEN'),
+    ],
+
     'umami' => [
         'script_url' => env('UMAMI_SCRIPT_URL'),
         'website_id' => env('UMAMI_WEBSITE_ID'),

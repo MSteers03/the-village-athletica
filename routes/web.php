@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Middleware\CheckMaintenance;
 use App\Http\Controllers\MembershipInquiryController;
 use App\Http\Controllers\ContactFormController;
+use App\Http\Controllers\HealthController;
 
 // Maintenance mode routes (always accessible)
 Route::get('/maintenance', [App\Http\Controllers\MaintenanceController::class, 'show'])->name('maintenance');
@@ -12,6 +13,11 @@ Route::post('/maintenance/contact', [App\Http\Controllers\MaintenanceController:
 Route::post('/membership-inquiry', [App\Http\Controllers\MembershipInquiryController::class, 'submit'])->name('membership.inquiry');
 
 Route::post('/contact-submit', [ContactFormController::class, 'submit'])->name('contact.submit');
+
+// Uptime monitoring, outside the maintenance group so it reports maintenance
+// mode rather than being masked by it.
+Route::get('/health', [HealthController::class, 'show'])->name('health');
+Route::get('/health/deep', [HealthController::class, 'deep'])->name('health.deep');
 
 Route::get('/sitemap.xml', function () {
     $content = file_get_contents(public_path('sitemap.xml'));
