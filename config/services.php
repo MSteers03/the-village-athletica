@@ -49,6 +49,9 @@ return [
         'host_url' => env('UMAMI_HOST_URL'),
         // Optional: comma-separated hostnames to track, e.g. "thevillageathletica.com.au".
         'domains' => env('UMAMI_DOMAINS'),
+        // Optional: Umami's recorder (heatmaps and session replays, Umami 3.2+), e.g.
+        // "https://stats.example.com/recorder.js". Sampling and input masking are set in Umami.
+        'recorder_url' => env('UMAMI_RECORDER_URL'),
     ],
 
 ];
