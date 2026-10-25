@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400..700&display=swap">
     <link rel="icon" href="{{ asset('favicon-32x32.png') }}">
+    @include('partials.umami')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-village-grey min-h-screen flex items-center justify-center py-6">
@@ -77,7 +78,7 @@
                                   placeholder="Tell us how we can help you..."></textarea>
                     </div>
                     
-                    <button type="submit" 
+                    <button type="submit" data-umami-event="maintenance-contact-submit" 
                             class="w-full bg-village-brown text-white py-3 px-4 rounded-md hover:bg-red-700 transition duration-200 font-medium">
                         Submit Inquiry
                     </button>

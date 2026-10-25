@@ -43,6 +43,7 @@
     @include('partials.structured-data', ['breadcrumb' => trim($__env->yieldContent('breadcrumb')) ?: null])
     @stack('structured-data')
 
+    @include('partials.umami')
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
     <!-- Google tag (gtag.js) -->

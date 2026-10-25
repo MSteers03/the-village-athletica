@@ -66,6 +66,14 @@
                     message: data.message
                 };
 
+                // Only the dropdown answers go to analytics, never contact details
+                window.trackEvent('contact-form-submit', {
+                    interest: this.formData.interest || 'none',
+                    experience: this.formData.experience || 'none',
+                    referral: this.formData.referral || 'none',
+                    promotions: !this.formData.no_promotions
+                });
+
                 // Reset form
                 this.formData = {
                     first_name: '',
@@ -86,6 +94,10 @@
                 }
             } else {
                 this.errors = data.errors || {};
+                window.trackEvent('contact-form-error', {
+                    reason: data.errors ? 'validation' : (response.status === 422 ? 'recaptcha' : 'server'),
+                    fields: Object.keys(this.errors).join(', ') || 'none'
+                });
                 this.submitStatus = {
                     show: true,
                     type: 'error',
@@ -98,6 +110,7 @@
                 }
             }
         } catch (error) {
+            window.trackEvent('contact-form-error', { reason: 'network', fields: 'none' });
             this.submitStatus = {
                 show: true,
                 type: 'error',

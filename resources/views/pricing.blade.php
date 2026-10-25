@@ -49,6 +49,8 @@
                     type: 'success',
                     message: data.message
                 };
+
+                window.trackEvent('membership-enquiry-submit', { level: this.selectedLevel });
                 
                 // Reset form
                 this.formData = { name: '', email: '', phone: '' };
@@ -60,6 +62,11 @@
                 }, 2000);
             } else {
                 this.errors = data.errors || {};
+                window.trackEvent('membership-enquiry-error', {
+                    level: this.selectedLevel,
+                    reason: data.errors ? 'validation' : 'server',
+                    fields: Object.keys(this.errors).join(', ') || 'none'
+                });
                 this.submitStatus = {
                     show: true,
                     type: 'error',
@@ -67,6 +74,7 @@
                 };
             }
         } catch (error) {
+            window.trackEvent('membership-enquiry-error', { level: this.selectedLevel, reason: 'network', fields: 'none' });
             this.submitStatus = {
                 show: true,
                 type: 'error',
@@ -128,7 +136,7 @@
                     </li>
                 </ul>
                 <p class="text-sm text-gray-500 italic mb-6 text-center">Can use 2 HIRT Classes + 1 60min class</p>
-                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Level 1'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" data-umami-event="membership-enquiry-open" data-umami-event-level="Level 1" @click="showModal = true; selectedLevel = 'Level 1'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
             </div>
@@ -175,7 +183,7 @@
                     </li>
                 </ul>
                 <p class="text-sm text-gray-500 italic mb-6 text-center">Can use 2 x HIRT classes as 1 session</p>
-                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Level 2'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" data-umami-event="membership-enquiry-open" data-umami-event-level="Level 2" @click="showModal = true; selectedLevel = 'Level 2'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
             </div>
@@ -223,7 +231,7 @@
                     </li>
                 </ul>
                 <div class="mb-6 h-6"></div>
-                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Level 3'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" data-umami-event="membership-enquiry-open" data-umami-event-level="Level 3" @click="showModal = true; selectedLevel = 'Level 3'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
             </div>
@@ -254,7 +262,7 @@
                             <p class="font-semibold text-village-brown">✓ No Joining Fee</p>
                         </div>
                     </div>
-                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'HIRT'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" data-umami-event="membership-enquiry-open" data-umami-event-level="HIRT" @click="showModal = true; selectedLevel = 'HIRT'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -273,7 +281,7 @@
                         <p>Structured to suit your individual needs. In these one-on-one sessions, the trainers' attention is fully focused on you.</p>
                         <p class="text-village-brown font-semibold">Dive deeper into your goals</p>
                     </div>
-                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = 'Personal Coaching'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" data-umami-event="membership-enquiry-open" data-umami-event-level="Personal Coaching" @click="showModal = true; selectedLevel = 'Personal Coaching'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -296,7 +304,7 @@
                             <p class="font-semibold text-village-brown">✓ 12 Week Expiry</p>
                         </div>
                     </div>
-                    <button type="button" aria-haspopup="dialog" @click="showModal = true; selectedLevel = '10-Pack'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    <button type="button" aria-haspopup="dialog" data-umami-event="membership-enquiry-open" data-umami-event-level="10-Pack" @click="showModal = true; selectedLevel = '10-Pack'" class="w-full bg-gradient-to-r from-village-brown to-red-800 text-white py-4 rounded-xl hover:from-red-800 hover:to-village-brown transition-all duration-300 font-bold text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                         Get Started
                     </button>
                 </div>
@@ -597,7 +605,7 @@
 <div class="text-center py-12 md:py-20 max-w-4xl mx-auto px-4">
     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
     <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
-    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
+    <a href="/contact" data-umami-event="cta-click" data-umami-event-cta="Contact us now" data-umami-event-location="pricing footer cta" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
         Contact Us Now →
     </a>
 </div>

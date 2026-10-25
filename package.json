@@ -22,9 +22,8 @@
     },
     "dependencies": {
         "@tailwindcss/postcss": "^4.2.2",
-        "@vercel/analytics": "^2.0.1",
-        "@vercel/speed-insights": "^2.0.0",
-        "alpinejs": "^3.17.4"
+        "alpinejs": "^3.17.4",
+        "web-vitals": "^6.2.3"
     },
     "name": "the-village-athletica",
     "version": "1.0.0",
