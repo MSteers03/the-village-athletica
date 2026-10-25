@@ -311,7 +311,7 @@
 <div class="text-center py-12 md:py-20 max-w-4xl mx-auto px-4">
     <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Ready to Start Training?</h2>
     <p class="text-lg md:text-2xl text-gray-600 mb-6 md:mb-10 leading-relaxed">Join us for a class and experience The Village difference!</p>
-    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-lg md:text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
+    <a href="/contact" data-umami-event="cta-click" data-umami-event-cta="Contact us now" data-umami-event-location="timetable footer cta" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-lg md:text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
         Contact Us Now →
     </a>
 </div>

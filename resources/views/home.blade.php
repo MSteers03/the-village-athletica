@@ -23,7 +23,7 @@
     <!-- Pause/play control for the looping video -->
     <button type="button"
             x-cloak
-            @click="playing ? $refs.video.pause() : $refs.video.play()"
+            @click="window.trackEvent('hero-video-toggle', { action: playing ? 'pause' : 'play' }); playing ? $refs.video.pause() : $refs.video.play()"
             :aria-label="playing ? 'Pause video' : 'Play video'"
             class="absolute bottom-3 right-3 z-10 flex items-center justify-center w-10 h-10 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors focus:outline-none focus:ring-4 focus:ring-white/50">
         <svg x-show="playing" aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
@@ -51,7 +51,7 @@
                 Take that step today.
             </p>
 
-            <a href="/contact" class="inline-block bg-black text-white px-10 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
+            <a href="/contact" data-umami-event="cta-click" data-umami-event-cta="Get in touch" data-umami-event-location="home about" class="inline-block bg-black text-white px-10 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
                 GET IN TOUCH
             </a>
         </div>
@@ -64,7 +64,7 @@
                 Your membership will be determined by how many sessions per week you'd like to attend. Each session is lead by one of our coaches to help you improve each time you attend a class.
             </p>
 
-            <a href="/pricing" class="inline-flex items-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
+            <a href="/pricing" data-umami-event="cta-click" data-umami-event-cta="Memberships" data-umami-event-location="home about" class="inline-flex items-center bg-black text-white px-8 py-4 rounded-lg font-bold hover:bg-gray-800 transition text-lg">
                 <svg aria-hidden="true" focusable="false" class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                 </svg>
@@ -255,7 +255,7 @@
 <div class="text-center py-12 md:py-20 max-w-4xl mx-auto px-4">
     <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Ready to Join The Village?</h2>
     <p class="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed">Contact us today to get started on your fitness journey!</p>
-    <a href="/contact" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
+    <a href="/contact" data-umami-event="cta-click" data-umami-event-cta="Contact us now" data-umami-event-location="home footer cta" class="inline-block bg-gradient-to-r from-village-brown to-red-900 text-white px-8 md:px-12 py-4 md:py-5 rounded-2xl font-bold hover:from-red-900 hover:to-village-brown transition-all duration-300 text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105">
         Contact Us Now →
     </a>
 </div>

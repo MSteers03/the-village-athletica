@@ -40,4 +40,15 @@ return [
         'secret_key' => env('RECAPTCHA_SECRET_KEY'),
     ],
 
+    // Self-hosted Umami analytics. The tracker is only rendered when both the
+    // script URL and website ID are set, so local and test builds stay quiet.
+    'umami' => [
+        'script_url' => env('UMAMI_SCRIPT_URL'),
+        'website_id' => env('UMAMI_WEBSITE_ID'),
+        // Optional: where events are sent, if not the same host as the script.
+        'host_url' => env('UMAMI_HOST_URL'),
+        // Optional: comma-separated hostnames to track, e.g. "thevillageathletica.com.au".
+        'domains' => env('UMAMI_DOMAINS'),
+    ],
+
 ];
