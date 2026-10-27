@@ -1,5 +1,3 @@
-import { onCLS, onFCP, onINP, onLCP, onTTFB } from 'web-vitals';
-
 // Umami's tracker is loaded async by partials/umami.blade.php. Events raised before it
 // has loaded are queued and sent once it's ready. With no tracker configured, nothing is sent.
 const script = document.getElementById('umami-script');
@@ -22,20 +20,7 @@ if (script) {
         queue.splice(0).forEach(([name, data]) => window.umami?.track(name, data));
     });
 
-    // Speed Insights replacement: one event per Core Web Vital. CLS is unitless, the rest are ms.
-    const reportVital = ({ name, value, rating, navigationType }) => {
-        track('web-vitals', {
-            metric: name,
-            value: name === 'CLS' ? Math.round(value * 1000) / 1000 : Math.round(value),
-            rating,
-            navigation: navigationType,
-        });
-    };
-    onCLS(reportVital);
-    onFCP(reportVital);
-    onINP(reportVital);
-    onLCP(reportVital);
-    onTTFB(reportVital);
+    // Core Web Vitals are collected by Umami itself (data-performance on the script tag).
 
     // Menu use, phone, email and links off the site. Links with their own data-umami-event are left to Umami.
     document.addEventListener('click', (event) => {
