@@ -4,6 +4,7 @@
     <script async id="umami-script"
             src="{{ config('services.umami.script_url') }}"
             data-website-id="{{ config('services.umami.website_id') }}"
+            data-performance="true"
             @if(config('services.umami.host_url')) data-host-url="{{ config('services.umami.host_url') }}" @endif
             @if(config('services.umami.domains')) data-domains="{{ config('services.umami.domains') }}" @endif></script>
     @php
