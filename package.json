@@ -22,7 +22,7 @@
     },
     "dependencies": {
         "@tailwindcss/postcss": "^4.2.2",
-        "alpinejs": "^3.17.4"
+        "alpinejs": "^3.17.5"
     },
     "name": "the-village-athletica",
     "version": "1.0.0",
