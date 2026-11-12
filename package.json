@@ -9,7 +9,7 @@
         "test": "cross-env LARAVEL_BYPASS_ENV_CHECK=1 vitest run"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.2.2",
+        "@tailwindcss/vite": "^4.3.5",
         "autoprefixer": "^10.6.2",
         "baseline-browser-mapping": "^2.11.35",
         "concurrently": "^10.0.6",
