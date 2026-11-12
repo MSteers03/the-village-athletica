@@ -14,7 +14,7 @@
         "baseline-browser-mapping": "^2.11.35",
         "concurrently": "^10.0.7",
         "cross-env": "^10.1.0",
-        "laravel-vite-plugin": "^3.0.1",
+        "laravel-vite-plugin": "^3.2.1",
         "postcss": "^8.5.32",
         "tailwindcss": "^4.2.2",
         "vite": "^8.3.5",
