@@ -9,19 +9,19 @@
         "test": "cross-env LARAVEL_BYPASS_ENV_CHECK=1 vitest run"
     },
     "devDependencies": {
-        "@tailwindcss/vite": "^4.2.2",
+        "@tailwindcss/vite": "^4.3.5",
         "autoprefixer": "^10.6.2",
         "baseline-browser-mapping": "^2.11.35",
-        "concurrently": "^10.0.6",
+        "concurrently": "^10.0.7",
         "cross-env": "^10.1.0",
-        "laravel-vite-plugin": "^3.0.1",
+        "laravel-vite-plugin": "^3.2.1",
         "postcss": "^8.5.32",
-        "tailwindcss": "^4.2.2",
-        "vite": "^8.3.5",
+        "tailwindcss": "^4.3.5",
+        "vite": "^8.3.6",
         "vitest": "^5.0.5"
     },
     "dependencies": {
-        "@tailwindcss/postcss": "^4.2.2",
+        "@tailwindcss/postcss": "^4.3.5",
         "alpinejs": "^3.17.5"
     },
     "name": "the-village-athletica",
