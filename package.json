@@ -11,14 +11,14 @@
     "devDependencies": {
         "@tailwindcss/vite": "^4.3.5",
         "autoprefixer": "^10.6.2",
-        "baseline-browser-mapping": "^2.11.35",
+        "baseline-browser-mapping": "^2.11.37",
         "concurrently": "^10.0.7",
         "cross-env": "^10.1.0",
         "laravel-vite-plugin": "^3.2.1",
-        "postcss": "^8.5.32",
+        "postcss": "^8.5.33",
         "tailwindcss": "^4.3.5",
         "vite": "^8.3.6",
-        "vitest": "^5.0.5"
+        "vitest": "^5.1.0"
     },
     "dependencies": {
         "@tailwindcss/postcss": "^4.3.5",
