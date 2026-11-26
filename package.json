@@ -11,7 +11,7 @@
     "devDependencies": {
         "@tailwindcss/vite": "^4.3.5",
         "autoprefixer": "^10.6.2",
-        "baseline-browser-mapping": "^2.11.37",
+        "baseline-browser-mapping": "^2.11.39",
         "concurrently": "^10.0.7",
         "cross-env": "^10.1.0",
         "laravel-vite-plugin": "^3.2.1",
