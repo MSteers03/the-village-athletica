@@ -10,7 +10,7 @@
     },
     "devDependencies": {
         "@tailwindcss/vite": "^4.3.5",
-        "autoprefixer": "^10.6.2",
+        "autoprefixer": "^10.7.0",
         "baseline-browser-mapping": "^2.11.37",
         "concurrently": "^10.0.7",
         "cross-env": "^10.1.0",
